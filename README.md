@@ -15,5 +15,5 @@ Creation d'une Application web qui va gerer les voitures dans une maison et faci
 Developpeures: 
 --Abdellatif Markazi
 --Imad El Khiati
---Riyad El Makhloufi
 --Ouiam Adham
+--Riyad El Makhloufi
