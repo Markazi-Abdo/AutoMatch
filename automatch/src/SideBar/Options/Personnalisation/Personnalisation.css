@@ -1,0 +1,32 @@
+.accordion-personnalisation{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.accordion-personnalisation .title{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid;
+    padding-bottom: 10px;
+}
+
+.accordion-personnalisation .title i{
+    cursor: pointer;
+}
+
+.accordion-personnalisation .body{
+    margin: 10px;
+}
+
+.accordion-personnalisation .body input{
+    border: 1px solid;
+    outline: none;
+    border-radius: 3px;
+    padding: 5px;
+    width: 55px;
+    margin: 3px;
+}
+
+.accordion-personnalisation .body span{
+    margin: 8px ;
+}

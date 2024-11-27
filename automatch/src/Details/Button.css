@@ -1,0 +1,21 @@
+:root{
+    --darkColor--: #121111;
+    --lightColor--: #ffffff;
+    --blueColor--: #2e77ae;
+    --orangeColor--: #ff8e2b;
+    --grayColor--: #b6b7b7 ;
+    --black--: #000000 ;
+}
+button{
+    background: linear-gradient(360deg, rgba(251,171,93,1) 0%, rgba(255,112,0,1) 100%) ;
+    border-radius: 8px;
+    font-size:large;
+    color: var(--lightColor--);
+    padding: 8px;
+    border: var(--orangeColor--);
+    margin-top: 20px;
+}
+@font-face {
+    font-family: 'custonFont';
+    src: url(#);
+}

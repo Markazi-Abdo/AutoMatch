@@ -1,0 +1,18 @@
+.trans-options{
+    display: flex;
+    gap: 15px;
+    margin: 10px 0 10px;
+}
+
+.trans-options button{
+    border: none;
+    border-radius: 10px;
+    padding: 3px;
+    transition: 0.5s;
+}
+
+.trans-options button:hover{
+    background: #121111;
+    color: white;
+    transition: 0.5s;
+}

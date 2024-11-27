@@ -1,0 +1,19 @@
+.sidebar-container{
+    background: #b6b7b74e;
+    padding: 30px;
+    margin-top: 25px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    height: 900px;
+    
+}
+
+.sidebar-container .titles{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.sidebar-container .titles h4{
+    color: blue;
+}

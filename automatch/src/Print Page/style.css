@@ -1,0 +1,122 @@
+:root {
+    --orangeColor: #ff8e2b;
+    --grayColor: #f4f4f4;
+    --darkText: #333;
+    --red: #d32f2f;
+    --green: #388e3c;
+    --blue: #1976d2;
+    --purple: #7b1fa2;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--grayColor);
+    overflow: hidden;
+  }
+  
+  .car-details-page {
+    padding: 20px;
+  }
+  
+  .car-image-section {
+    text-align: center;
+  }
+  
+  .car-image {
+    width: 80%;
+    border-radius: 10px;
+  }
+  
+  .color-options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .color-swatch {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  input[type="radio"] {
+    display: none;
+}
+
+#carImage{
+    position: relative;
+
+}
+img{
+    transition: 1s;
+}
+#carImage2{
+    position: absolute;
+}
+.prix{
+  position: absolute;
+  top: -275px;
+  right: 20px;
+  font-weight: bold;
+  color: var(--orangeColor);
+  font-size: 20px;
+}
+.color-option {
+    width: 30px;
+    height: 30px;
+    border-radius: 10%;
+    display: inline-block;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+.color-option:checked{
+    border: 1px solid black;
+}
+.color-green { background-color: rgb(28, 143, 28); }
+.color-blue { background-color: rgb(25, 25, 177); }
+.color-red { background-color: rgb(179, 19, 19); }
+label{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    
+}
+.dh{
+  position: absolute;
+    top:-268px;
+    right: 90px;
+    font-weight: bold;
+    font-size: 13px;
+    color: var(--blue);
+}
+.figure{
+  width: 30px;
+  height: 5px;
+  background-color: var(--blue);
+  position: relative;
+  top: -259px;
+  right: -693px;
+}
+.colors-label{
+  position: absolute;
+    top: 80px;
+    left: 30px;
+    display: flex;
+    flex-direction: column;
+}
+input[type="radio"]:checked + .color-option {
+    border: 2px solid #000;
+}
+select {
+  background-color: var(--blue);
+  border: none;
+  color: white;
+  padding: 8px;
+}
+
+.details{
+  margin: 0;
+}

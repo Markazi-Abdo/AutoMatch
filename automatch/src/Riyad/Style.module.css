@@ -1,0 +1,155 @@
+:root {
+    --darkColor--: #121111;
+    --lightColor--: #ffffff;
+    --blueColor--: #2e77ae;
+    --orangeColor--: #ff8e2b;
+    --grayColor--: #b6b7b7;
+    --black--: #000000;
+}
+
+/* Style pour le titre */
+.Title {
+    background-color: var(--darkColor--);
+    width: 100%;
+    padding: 8px;
+}
+
+.Title h1 {
+    text-align: center;
+    color: azure;
+    font-size: 2rem;
+}
+
+/* Style pour le pied de page */
+.Footer {
+    
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+}
+
+.ListBtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+}
+
+.ListBtn li {
+    list-style: none;
+    
+}
+
+.FooterBtn {
+    margin: 5px 12px;
+    background-color: var(--orangeColor--);
+    color: var(--lightColor--);
+    border-radius: 3px;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s ease-in-out;
+}
+
+.FooterBtn:hover {
+    border: solid 2px var(--lightColor--);
+    background-color: var(--blueColor--);
+    color: var(--lightColor--);
+}
+
+/* Style pour la bande de navigation */
+.Bande {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.ListBande {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    background-color: var(--orangeColor--);
+}
+
+.ListBande li {
+    list-style: none;
+    text-align: center;
+    color: var(--lightColor--);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: var(--orangeColor--);
+    padding: 8px 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Style pour la carte de marque */
+.MarqueList{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 65px;
+}
+.MarqueList li{
+    list-style: none;
+    
+}
+.cardMarque {
+    width: 250px;
+    height: 250px;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 10px;
+    background: linear-gradient(360deg, rgba(177,177,177,1) 0%, rgba(255,255,255,1) 50%, rgba(177, 177, 177, 1) 100%) ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.cardMarque img {
+    width: 70%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.cardMarque p {
+    margin-top:10px ;
+    font-size: 25px;
+    text-align: center;
+    color: var(--lightColor--);
+    margin-top: 1px;
+}
+
+.cardMarque:hover {
+    border: solid 2px var(--blueColor--);
+    transform: scale(1.05);
+}
+
+/* Style pour le menu déroulant */
+select {
+    padding: 8px;
+    font-size: 16px;
+    border: 2px solid var(--blueColor--);
+    border-radius: 4px;
+    background-color: var(--lightColor--);
+    color: var(--black--);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+select:focus {
+    
+    border-color: var(--orangeColor--);
+}
+
+

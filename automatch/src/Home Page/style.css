@@ -1,0 +1,110 @@
+:root{
+    --darkColor: #121111;
+    --lightColor: #ffffff;
+    --blueColor: #2e77ae;
+    --orangeColor: #ff8e2b;
+    --grayColor: #b6b7b7;
+    --black: #000000;
+}
+
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--lightColor);
+}
+
+/* Contenu Styles */
+@font-face{
+    font-family: 'Bitsumishi';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Bitsumishi'), url('https://fonts.cdnfonts.com/s/21017/BITSUMIS.woff') format('woff');
+}
+
+h6{
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+
+.contenu{
+    text-align: left;
+    margin-top: 5px;
+}
+
+/* Footer Styles */
+
+.footer{
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: var(--lightColor);
+    border-radius: 50px 50px 0 0;
+    background-color: var(--darkColor);
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centerFooter{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.contentText{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.contentText div{
+    gap: 30px;
+}
+
+.footer-step{
+    text-align: center;
+    color: var(--lightColor);
+}
+
+.footer-step img{
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.footer-button{
+    margin-left: 20px;
+}
+
+.button{
+    background-color: var(--orangeColor);
+    color: var(--lightColor);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 60px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button:hover{
+    background-color: var(--blueColor);
+    box-shadow: 0px 4px 12px var(--blueColor);
+    transform: scale(1.05);
+}
+
+.btnShadow{
+    box-shadow: 0px 0px 12px var(--orangeColor);
+    padding: 30px 60px;
+    font-weight: bold;
+    font-size: 20px;
+}

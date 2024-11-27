@@ -1,0 +1,25 @@
+:root{
+    --darkColor--: #121111;
+    --lightColor--: #ffffff;
+    --blueColor--: #2e77ae;
+    --orangeColor--: #ff8e2b;
+    --grayColor--: #b6b7b7 ;
+    --black--: #000000 ;
+}
+.App{
+    margin-top: -20px;
+    background: #b6b7b7;
+    height: 100%;
+}
+.navbar.f{
+    margin: 40px 120px;
+}
+p{
+    padding: 0;
+    margin: 0;
+    line-height: 1.4;
+}
+hr{
+    border:1px solid black;
+    margin-top: -8px;
+}
