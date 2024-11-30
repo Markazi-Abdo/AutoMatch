@@ -1,13 +1,14 @@
+import Header from "../Header/Header";
 import Bande from "./Bande";
 import Footer from "./Footer";
 import Model from './Model';
-import NavBar  from './NavBar';
+
 
 
 export default function App(){
     return(
         <div className="">
-            <NavBar/>
+            <Header/>
             <Bande/>
             <br></br>
             <Model/>
