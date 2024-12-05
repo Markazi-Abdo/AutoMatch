@@ -1,5 +1,5 @@
 import './style.css';
-
+import { Link } from 'react-router-dom';
 export default function FooterHome() {
     return (
         <div className="footer">
@@ -18,7 +18,7 @@ export default function FooterHome() {
                     </div>
                 </div>
                 <div className="footer-button">
-                    <button className="button btnShadow">RECHERCHER</button>
+                   <Link to='/rechercher-marque'> <button className="button btnShadow">RECHERCHER</button> </Link> 
                 </div>
             </div>
         </div>

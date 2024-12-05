@@ -1,4 +1,5 @@
 import './style.css';
+import { Link } from 'react-router-dom';
 export default function ContenuHome(){
     return(
                 <div className="col-7 contenu mt-5">
@@ -8,7 +9,7 @@ export default function ContenuHome(){
                     <h6>
                         TROUVER VOTRE VOITURE FACILEMENT
                     </h6>
-                    <button className="button">VOIR TOUS</button>
+                   <Link to='/voirTous-page'> <button className="button">VOIR TOUS</button> </Link>
                 </div>
 
     )
