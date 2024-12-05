@@ -1,9 +1,11 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import AppAutoMatch from './AppAutoMatch.jsx'
-
+import { BrowserRouter } from 'react-router-dom'
+import RoutingManagement from './RoutingManagement'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <AppAutoMatch />
+    <BrowserRouter>
+    <RoutingManagement />
+    </BrowserRouter>
   </StrictMode>,
 )
