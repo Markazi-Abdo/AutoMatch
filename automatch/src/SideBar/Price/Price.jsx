@@ -58,7 +58,7 @@ const Price = () => {
           {leftValue.toLocaleString()}
         </span>
         <span
-          className="label"
+          className="label second"
           style={{
             left: `calc(${rightPercent}% - 20px)`, // Adjust position to center the label
           }}

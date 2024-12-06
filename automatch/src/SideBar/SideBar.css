@@ -1,11 +1,11 @@
 .sidebar-container{
     background: #b6b7b74e;
-    padding: 30px;
+    padding: 19px;
     margin-top: 25px;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
-    height: 900px;
-    
+    min-height: 900px;
+    width: 355px;
 }
 
 .sidebar-container .titles{
@@ -15,5 +15,5 @@
 }
 
 .sidebar-container .titles h4{
-    color: blue;
+    color: #2e77ae;
 }

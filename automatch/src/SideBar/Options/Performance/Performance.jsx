@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faPlus} from '@fortawesome/free-solid-svg-icons';
+import {faPlus, faMinus} from '@fortawesome/free-solid-svg-icons';
 import './Performance.css'
 import { useState } from 'react';
 export default function Performance(){
@@ -13,7 +13,7 @@ export default function Performance(){
         <div className="accordion-performance">
             <div className="title">
                 <h3>Performance</h3>
-                <i><FontAwesomeIcon icon={faPlus} onClick={setDisplay}/></i>
+                <i>{!isOpen ? <FontAwesomeIcon icon={faPlus} onClick={setDisplay}/> : <FontAwesomeIcon icon={faMinus} onClick={setDisplay}/>}</i>
             </div>
             {
                 isOpen && (

@@ -2,15 +2,16 @@
     border: 3px solid rgba(57, 57, 249, 0.707);
     border-radius: 10px;
     text-align: center;
-    padding: 15px;
+    padding: 20px;
     margin: 15px;
-    width: 250px;
+    width: 245px;
+    height: 250px;
     position: relative;
     box-shadow: 0 0 13px black;
 }
 
 .card .header img{
-    height: 100px;
+    height: 120px;
     display: inline-block;
     text-align: center;
 }
@@ -59,12 +60,20 @@
 }
 
 .card .body button{
-    padding: 6px;
+    padding: 8px;
     margin-top: 5px;
+    border: 1px white;
+    font-size: 0.8rem;
     border-radius: 10px;
     text-align: center;
     width: 140px;
-    background: blue;
+    background: linear-gradient(to bottom, rgba(76,154,246,1) 0%, rgba(22,87,223,1) 98%);
     color: white;
     text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.card .body button:hover{
+    box-shadow: 0 0 13px rgba(57, 57, 249, 0.707);
+    transition: 0.5s;
 }

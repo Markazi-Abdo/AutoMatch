@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faPlus} from '@fortawesome/free-solid-svg-icons';
+import {faPlus, faMinus} from '@fortawesome/free-solid-svg-icons';
 import './Autonomie.css'
 import { useState } from 'react';
 
@@ -14,7 +14,7 @@ export default function Autonomie(){
         <div className="accordion-autonomie">
             <div className="title">
                 <h3>Autonomie et recharge</h3>
-                <i><FontAwesomeIcon icon={faPlus} onClick={setDisplay}/></i>
+                <i>{!isOpen ? <FontAwesomeIcon icon={faPlus} onClick={setDisplay}/> : <FontAwesomeIcon icon={faMinus} onClick={setDisplay}/>}</i>
             </div>
             {
                 isOpen && (

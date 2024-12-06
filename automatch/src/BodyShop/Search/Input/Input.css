@@ -10,20 +10,23 @@
 .input-container button{
     border: 1px solid;
     outline: none;
+    color: white;
     border-radius: 25px;
-    padding: 9px;
+    background: linear-gradient(360deg, rgba(251,171,93,1) 0%, rgba(255,112,0,1) 100%);
+    padding: 10px;
     font-size: 1.25rem;
     margin-left: 30px;
     margin-right: 50px;
     width: 120px;
+    transition: 0.5s;
 }
 
 .input-container input:focus{
-    box-shadow: 0 0 23px black;
-    transition: 0.2s;
+    box-shadow: 0 0 13px rgba(57, 57, 249, 0.707);
+    transition: 0.5s;
 }
 
 .input-container button:hover{
-    box-shadow: 0 0 23px black;
-    transition: 0.2s;
+    box-shadow: 0 0 13px rgba(57, 57, 249, 0.707);
+    transition: 0.5s;
 }

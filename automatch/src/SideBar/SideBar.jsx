@@ -12,7 +12,7 @@ export default function SideBar(){
                 <h4>Reset All</h4>
             </div>
             <div className="components">
-                <h3>Fourchettes de prix</h3>
+                <h4>Fourchettes de prix</h4>
                 <Price/>
                 <CarbTrans/>
                 <Options/>

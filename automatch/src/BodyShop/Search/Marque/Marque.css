@@ -11,11 +11,11 @@
 }
 
 .marque-container select:focus{
-    box-shadow: 0 0 23px black;
+    box-shadow: 0 0 13px rgba(57, 57, 249, 0.707);
     transition: 0.5s;
 }
 
 .marque-container select:hover{
-    box-shadow: 0 0 23px black;
+    box-shadow: 0 0 13px rgba(57, 57, 249, 0.707);
     transition: 0.5s;
 }
