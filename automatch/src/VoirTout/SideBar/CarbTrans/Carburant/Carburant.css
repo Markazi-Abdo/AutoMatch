@@ -1,0 +1,18 @@
+.car-options{
+    display: flex;
+    gap: 15px;
+    margin: 10px 0 10px;
+}
+
+.car-options button{
+    border: none;
+    border-radius: 10px;
+    padding: 7px;
+    transition: 0.5s;
+}
+
+.car-options button:hover{
+    background: #2e77ae;
+    color: white;
+    transition: 0.5s;
+}
