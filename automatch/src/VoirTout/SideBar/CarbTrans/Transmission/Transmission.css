@@ -5,8 +5,10 @@
 }
 
 .trans-options button{
-    border: none;
-    border-radius: 10px;
+    border: 2px solid #2e77ae;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    color: #2e77ae;
     padding: 7px;
     transition: 0.5s;
 
