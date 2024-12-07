@@ -22,13 +22,13 @@
 }
 
 .cars-container .to-top-button button:hover{
-    background: black;
+    background: linear-gradient(to bottom, rgba(76,154,246,1) 0%, rgba(22,87,223,1) 98%);
     color: white;
-    transition: 0.2s;
+    transition: 0.5s;
 }
 
 .cars-container .to-top-button button:active{
-    background: black;
+    background: linear-gradient(to bottom, rgba(76,154,246,1) 0%, rgba(22,87,223,1) 98%);
     color: white;
-    transition: 0.2s;
+    transition: 0.5s;
 }
