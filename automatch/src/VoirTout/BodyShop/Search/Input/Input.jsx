@@ -4,7 +4,7 @@ export default function Input(){
     return(
         <div className="input-container">
             <input type="text"/>
-            <button>Chercher</button>
+            <button>CHERCHER</button>
         </div>
     )
 }

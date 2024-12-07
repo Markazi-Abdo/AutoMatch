@@ -1,10 +1,10 @@
 .input-container input{
-    border: 1px solid;
+    border: 3px solid;
     outline: none;
-    border-radius: 8px;
+    border-radius: 11px;
     padding: 9px;
     height: 45px;
-    width: 480px;
+    width: 400px;
     transition: 0.5s;
 }
 
@@ -13,11 +13,11 @@
     outline: none;
     color: white;
     border-radius: 25px;
-    background: linear-gradient(360deg, rgba(251,171,93,1) 0%, rgba(255,112,0,1) 100%);
-    padding: 10px;
-    font-size: 1.25rem;
+    background: linear-gradient(to bottom, rgb(241, 129, 17) 0%, rgba(255,112,0,1) 100%);
+    padding: 15px;
+    font-size: 1rem;
     margin-left: 30px;
-    margin-right: 50px;
+    margin-right: 90px;
     width: 120px;
     cursor: pointer;
     transition: 0.5s;
