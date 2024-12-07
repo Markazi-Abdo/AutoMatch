@@ -5,7 +5,7 @@
     padding: 20px;
     margin: 15px;
     width: 245px;
-    height: 250px;
+    min-height: 250px;
     position: relative;
     box-shadow: 0 0 13px black;
 }
@@ -16,6 +16,10 @@
     text-align: center;
 }
 
+.card .body h3{
+    font-weight: 500;
+    margin-bottom: 10px;
+}
 .card .header .color .green{
     background: green;
 }
