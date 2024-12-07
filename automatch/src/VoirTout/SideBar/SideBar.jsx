@@ -1,7 +1,6 @@
 import CarbTrans from "./CarbTrans/CarbTransComponent";
 import Options from "./Options/Options";
 import Price from "./Price/Price";
-
 import './SideBar.css'
 
 export default function SideBar(){

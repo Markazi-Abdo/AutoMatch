@@ -9,7 +9,11 @@
     padding-right: 20px;
     transition: 0.5s;
 }
-
+.marque-container h3{
+    color: lightgray;
+    margin-left: 5px;
+    margin-top: -10px;
+}
 .marque-container select:focus{
     box-shadow: 0 0 13px rgba(57, 57, 249, 0.707);
     transition: 0.5s;
