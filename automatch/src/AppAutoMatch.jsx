@@ -1,23 +1,9 @@
-import Header from "./Header/Header";
-import SideBar from "./SideBar/SideBar";
-import './App.css'
-import BodyShop from "./BodyShop/Bodyshop";
-import { useEffect } from "react";
+import AppVoirTout from "./VoirTout/AppVoirTout";
 
 export default function AppAutoMatch(){
-  useEffect(()=>{
-    document.title ='Voir Tout';
-  }, []);
-  
   return(
-    <div>
-      <Header />
-      <main>
-        <aside>
-          <SideBar/>
-        </aside>
-        <BodyShop />
-      </main>
-    </div>
+    <>
+      <AppVoirTout />
+    </>
   )
 }
