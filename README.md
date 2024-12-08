@@ -16,4 +16,4 @@ Developpeures:
 --Abdellatif Markazi
 --Imad El Khiati
 --Ouiam Adham
---Riyad El Makhloufi
+--Riyad Makhloufi
