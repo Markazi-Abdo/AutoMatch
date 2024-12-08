@@ -4,6 +4,9 @@ import './App.css'
 import BodyShop from "./BodyShop/Bodyshop";
 import { useEffect } from "react";
 
+//Abdellatif Markazi
+//Ouiam Adham
+
 export default function AppVoirTout(){
   useEffect(()=>{
     document.title ='Voir Tout';

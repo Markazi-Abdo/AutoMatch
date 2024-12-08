@@ -5,7 +5,7 @@ import {faArrowUp} from  '@fortawesome/free-solid-svg-icons'
 export default function Products(){
     return(
         <div className="cars-container">
-            {Array.from({length:32}).map((_,index)=>{
+            {Array.from({length:16}).map((_,index)=>{
                 return <Product key={index} />
             })}
             <div className="to-top-button">

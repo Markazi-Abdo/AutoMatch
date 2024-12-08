@@ -16,4 +16,6 @@
 
 .sidebar-container .titles h4{
     color: #2e77ae;
+    cursor: pointer;
+    transition: 0.5s;
 }
