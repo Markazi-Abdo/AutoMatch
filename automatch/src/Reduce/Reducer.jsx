@@ -1530,6 +1530,20 @@ const stateInitial = {
         }
     ]
 }
-export default function Reduce(data =stateInitial) {
-            return data;
-}
+export default function Reduce(data =stateInitial, action) {
+    switch(action.type){
+        case 'INPUT':
+            const cherchResult1 = data.cars.
+            filter((car)=>car.models.some((model)=>{return model.anneesDisponibles.
+                some((year)=>{return model.detailsParAnnee[year]?.keyWords.
+                    includes(action.playload.input)})}))
+            return {...data, cars:[...cherchResult1]}
+
+        case 'MARQUE':
+            const cherchResult2=data.cars.filter((car)=>{return car.marque==action.playload.marqueSelectValue})
+        case 'MODEL':
+            const cherchResult3=data.cars.models.some((model)=>{return model.model==action.playload.modelSelectValue})
+
+        default : return data
+
+    }}

@@ -2,7 +2,7 @@ import  Style from'./style.module.css';
 import { Link } from 'react-router-dom';
 export default function ContenuHome(){
     return(
-                <div className="col-7 mt-5" className={Style.contenu}>
+                <div className="col-7 mt-5 ${Style.contenu}">
                     <h1>
                         AUTO<br/>MATCH
                     </h1>
