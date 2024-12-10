@@ -7,11 +7,15 @@
     --black: #000000;
 }
 
+
+
+/* Body */
 body{
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: var(--lightColor);
 }
+
 
 /* Contenu Styles */
 @font-face{
@@ -21,10 +25,51 @@ body{
     src: local('Bitsumishi'), url('https://fonts.cdnfonts.com/s/21017/BITSUMIS.woff') format('woff');
 }
 
+.contenu h1{
+   font-size: 150px;
+   line-height: 100px;
+    font-family: 'Bitsumishi';
+    color: var(--blueColor);
+}
+
 h6{
     font-weight: bold;
     font-size: 20px;
     letter-spacing: 5px;
+}
+.home{
+    display: flex;
+    justify-content: space-between;
+}
+.home img{
+    position: absolute;
+    bottom: 130px;
+}
+@media screen and (min-width: 1024px) {
+    .home img{
+        position: absolute;
+        bottom: 130px;
+        width: 450px;
+    }
+    .contenu h1{
+        font-size: 140px;
+        line-height: 110px;
+         font-family: 'Bitsumishi';
+         color: var(--blueColor);
+     }
+}
+@media screen and (min-width: 1340px) {
+    .home img{
+        position: absolute;
+        bottom: 130px;
+        width: 550px;
+    }
+    .contenu h1{
+        font-size: 170px;
+        line-height: 120px;
+         font-family: 'Bitsumishi';
+         color: var(--blueColor);
+     }
 }
 
 .contenu{
@@ -46,6 +91,7 @@ h6{
     background-color: var(--darkColor);
     padding: 30px 20px;
     display: flex;
+    box-sizing: border-box;
     justify-content: center;
     align-items: center;
 }
@@ -61,16 +107,21 @@ h6{
 }
 
 .contentText{
+
     display: flex;
+    gap: 40px;   
     align-items: center;
-    gap: 30px;
+    justify-content: space-evenly;
 }
 
 .contentText div{
-    gap: 30px;
+    display: flex;
+    gap: 40px;
 }
 
-.footer-step{
+.footerStep{
+    
+    flex-direction: row;
     text-align: center;
     color: var(--lightColor);
 }
@@ -81,7 +132,7 @@ h6{
     margin-top: 10px;
 }
 
-.footer-button{
+.footerButton{
     margin-left: 20px;
 }
 
@@ -94,11 +145,12 @@ h6{
     font-size: 16px;
     cursor: pointer;
     transition: all 0.3s ease;
+    margin: 0;
 }
 
 .button:hover{
     background-color: var(--blueColor);
-    box-shadow: 0px 4px 12px var(--blueColor);
+    box-shadow: 0px 4px 12px var(--orangeColor);
     transform: scale(1.05);
 }
 

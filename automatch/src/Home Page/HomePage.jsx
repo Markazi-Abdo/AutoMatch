@@ -1,16 +1,16 @@
-import Nav from "./nav";
-import ContenuHome from "./contenuHome";
-import FooterHome from "./footerHome";
-
+import Nav from "./Nav";
+import ContenuHome from "./ContenuHome";
+import FooterHome from "./FooterHome";
+import  style from'./style.module.css';
 export default function HomePage(){
     return(
         <div>
             <div className="container">
                 <Nav />
-                <div className="contenu row">
+            <div className={style.home} >
                     <ContenuHome />
                     <div className="col-5">
-                        <img src="./mechanic (1).png" alt="mechanicImg" width="550px" />
+                        <img src="./mechanic (1).png" alt="mechanicImg" />
                     </div>
                 </div>
             </div>

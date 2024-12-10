@@ -74,22 +74,32 @@
 .ListBande {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
-    background-color: var(--orangeColor--);
 }
-
+.ListBande li:first-child{
+    background-color: var(--blueColor--);
+    
+}
 .ListBande li {
     list-style: none;
     text-align: center;
-    color: var(--lightColor--);
     text-transform: uppercase;
     letter-spacing: 2px;
-    background-color: var(--orangeColor--);
-    padding: 8px 12px;
+    background-color: var(--grayColor--);
+    padding: 5px 30px;
+    color: var(--lightColor--);
     transition: all 0.3s ease-in-out;
+    position: relative;
 }
-
+.ListBande li span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--orangeColor--);
+    height: 4px;
+}
 /* Style pour la carte de marque */
 .MarqueList{
     display: flex;
