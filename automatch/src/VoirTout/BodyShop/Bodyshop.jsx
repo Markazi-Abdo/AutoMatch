@@ -13,7 +13,7 @@ function BodyShop({cars, inputCherche, marqueSelectCherche, modelSelectCherche})
                 <Input cars={cars} inputCherche={inputCherche}/>
             </div>
             <div className="body">
-                <Products/>
+                <Products cars={cars}/>
             </div>
         </div>
     )

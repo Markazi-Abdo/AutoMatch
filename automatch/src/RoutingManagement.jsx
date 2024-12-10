@@ -2,7 +2,8 @@ import { Route , Routes } from "react-router-dom"
 import HomePage from "./Home Page/HomePage"
 import App from "./Riyad/App"
 import CarDetails from "./Print Page/all"
-import AppAutoMatch from "./AppAutoMatch"
+//import AppAutoMatch from "./AppAutoMatch"
+import AppVoirTout from "./VoirTout/AppVoirTout"
 import ModelApp from "./Model Page/ModelApp"
 export default function RoutingManagement() {
   return (
@@ -10,7 +11,7 @@ export default function RoutingManagement() {
 
 
         {/* ------ Home Page ------ */}
-        <Route path = '/acceuil' element = {<HomePage/>} />
+        <Route path = '/' element = {<HomePage/>} />
 
 
         {/* ------ Rechercher ------ */}
@@ -23,7 +24,7 @@ export default function RoutingManagement() {
 
 
         {/* ------ Voir Tous ------ */}
-            <Route path = '/voirTous-page' element = {<AppAutoMatch/>} />
+            <Route path = '/voirTous-page' element = {<AppVoirTout/>} />
 
             {/* <Route path = '/rechercher-model' element = {<App/>} /> */}
             <Route path = '/voirTous-impression' element = {<CarDetails/>} />
