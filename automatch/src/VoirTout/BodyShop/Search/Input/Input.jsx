@@ -1,4 +1,6 @@
+import { useState } from 'react'
 import './Input.css'
+
 
 export default function Input({inputCherche}){
     const [input, setInput] = useState("")
@@ -7,8 +9,8 @@ export default function Input({inputCherche}){
     }
     return(
         <div className="input-container">
-            <input type="text" value={input} onChange={(e)=>{setInput(e.target.value)}}/>
-            <button onClick={handleCherche}>CHERCHER</button>
+            <input type="text" placeholder='Exemple: "famille"' value={input} onChange={(e)=>{setInput(e.target.value)}}/>
+            <button onClick={handleCherche}>Chercher</button>
         </div>
     )
 }

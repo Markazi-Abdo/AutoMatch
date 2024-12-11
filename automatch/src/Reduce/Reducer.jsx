@@ -1528,22 +1528,44 @@ const stateInitial = {
                 }
             ]
         }
-    ]
-}
+    ],
+    searchText:"",
+    selectedMarque:"",
+    selectedModel:"",
+    filteredCars:[]
+    
+};
+
 export default function Reduce(data =stateInitial, action) {
     switch(action.type){
         case 'INPUT':
-            const cherchResult1 = data.cars.
-            filter((car)=>car.models.some((model)=>{return model.anneesDisponibles.
-                some((year)=>{return model.detailsParAnnee[year]?.keyWords.
-                    includes(action.playload.input)})}))
-            return {...data, cars:[...cherchResult1]}
+            return {...data, searchText:action.payload.input,
+                 filteredCars:filtering(data.cars, action.payload.input, data.selectedMarque, data.selectedModel)}
 
         case 'MARQUE':
-            const cherchResult2=data.cars.filter((car)=>{return car.marque==action.playload.marqueSelectValue})
+            return {...data, selectedMarque:action.payload.marqueSelectValue,
+                 filteredCars:filtering(data.cars, data.searchText, action.payload.marque, data.selectedModel)}
+        
         case 'MODEL':
-            const cherchResult3=data.cars.models.some((model)=>{return model.model==action.playload.modelSelectValue})
-
+            return {...data, selectedModel:action.payload.modelSelectValue,
+                 filteredCars:filtering(data.cars, data.searchText, data.selectedMarque, action.payload.model)}
+        
         default : return data
 
     }}
+
+
+
+
+    function filtering(cars, searchText, selectedMarque, selectedModel) {
+        return cars.filter((car) => {
+            return car.models.some((model) => {
+                return Object.entries(model.detailsParAnnee).some(([annee, modelAnnee]) => {
+                    const matchKeyword = modelAnnee.keyWords.some((keyword) => keyword.toLowerCase().includes(searchText.toLowerCase()));
+                    const matchMarque = selectedMarque ? car.marque.nom === selectedMarque : true;
+                    const matchModel = selectedModel ? model.model === selectedModel : true;
+                    return matchKeyword && matchMarque && matchModel;
+                });
+            });
+        });
+    }

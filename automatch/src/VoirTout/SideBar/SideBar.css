@@ -5,6 +5,9 @@
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
     min-height: 900px;
+    overflow: hidden;
+    width: 350px;
+    
     
 }
 
