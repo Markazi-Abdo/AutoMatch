@@ -19,14 +19,14 @@ export default function RoutingManagement() {
             <Route path = '/rechercher-marque' element = {<App/>} />
 
             {/* !!!!!------ Choisir Model ------ !!!!!*/}
-            <Route path = '/modele' element = {<ModelApp/>} />
+            <Route path = '/modele/:id' element = {<ModelApp/>} />
 
 
         {/* ------ Voir Tous ------ */}
             <Route path = '/voirTous-page' element = {<AppAutoMatch/>} />
 
             {/* <Route path = '/rechercher-model' element = {<App/>} /> */}
-            <Route path = '/voirTous-impression' element = {<CarDetails/>} />
+            <Route path = '/voirTous-impression/:id/:model/:anne' element = {<CarDetails/>} />
 
 
     </Routes>

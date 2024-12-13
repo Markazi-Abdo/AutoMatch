@@ -12,7 +12,6 @@ export default function ModelApp(){
             <Bande/>
             <br></br>
             <Model/>
-            <Footer/>
         </div>
     )
 }

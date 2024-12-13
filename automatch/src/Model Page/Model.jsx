@@ -1,9 +1,9 @@
 
-import Products from './Products/Products/Products'
+import Models from './Products/Products/models'
 export default function Model() {
     return (
         <>
-        <Products />
+        <Models />
         </>
 
     )
