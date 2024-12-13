@@ -4,7 +4,6 @@
     margin-left: 10px;
     gap: 10px;
     position: relative;
-    overflow:scroll;
 }
 .cars-container .to-top-button{
     position: fixed;

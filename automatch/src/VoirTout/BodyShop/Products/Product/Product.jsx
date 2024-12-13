@@ -1,11 +1,12 @@
 import './Product.css'
+import { useNavigate } from 'react-router-dom';
 
-export default function Product({ id, marque, annee, details }) {
+export default function Product({ id, marque, annee, details, model }) {
   const firstColorKey = Object.keys(details.colors)[0];
   const firstColorSrc = details.colors[firstColorKey].image;
-
+  const navigate =useNavigate()
   const handleClickDetails = () => {
-    // Handle click for more details here
+    navigate('')
   };
 
   return (

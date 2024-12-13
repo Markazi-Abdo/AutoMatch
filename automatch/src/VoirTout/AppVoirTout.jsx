@@ -5,14 +5,19 @@ import BodyShop from "./BodyShop/Bodyshop";
 import { useEffect } from "react";
 import {connect} from 'react-redux';
 import Products from "./BodyShop/Products/Products/Products";
+import {useState} from 'react'
 //Abdellatif Markazi
-//Ouiam Adham
+//Ouiam Adham: fix 1er filtrage cars filtered cars
 
-function AppVoirTout({cars, inputCherche, marqueSelectCherche, modelSelectCherche}){
+function AppVoirTout({cars, filteredCars, inputCherche, marqueSelectCherche, modelSelectCherche}){
   useEffect(()=>{
     document.title ='Voir Tout';
   }, []);
+  const[modelN, setModelN] = useState('')
   
+  function modelNotif(selectedModel){
+    setModelN(selectedModel)
+  }
   return(<div>
     <Header />
     <div className="voirTout">
@@ -24,12 +29,11 @@ function AppVoirTout({cars, inputCherche, marqueSelectCherche, modelSelectCherch
       </aside>
       <main>
         <div className="bodyShop">
-        <BodyShop cars={cars} marqueSelectCherche={marqueSelectCherche} modelSelectCherche={modelSelectCherche} inputCherche={inputCherche} />
+        <BodyShop cars={cars} marqueSelectCherche={marqueSelectCherche} modelSelectCherche={modelSelectCherche} inputCherche={inputCherche} modelNotif={modelNotif} />
         </div>
       <div className="products">
-      {!cars || cars.length === 0?<p className="no-cars-message">Aucune voiture disponible pour le moment.</p>:
-   
-        <Products cars={cars}/>}
+     
+        <Products cars={filteredCars} modelN={modelN}/>
         </div>      
       </main>
 
@@ -44,14 +48,15 @@ function AppVoirTout({cars, inputCherche, marqueSelectCherche, modelSelectCherch
 
 const mapStateToProps =(state)=>{
   return {
-      cars:state.cars
+      cars:state.cars,
+      filteredCars:state.filteredCars
   }
 }
 
 
 const mapDispatchToProps=(dispatch)=>{
   return{
-      inputCherche: (input)=>dispatch({type:'INPUT', payload:{input}}),
+      inputCherche: (input)=>{dispatch({type:'INPUT', payload:{input}})},
       marqueSelectCherche: (marqueSelectValue)=>dispatch({type:'MARQUE', payload:{marqueSelectValue}}),
       modelSelectCherche: (modelSelectValue)=>dispatch({type:'MODEL', payload:{modelSelectValue}})
       

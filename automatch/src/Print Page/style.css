@@ -16,7 +16,7 @@
   }
   
   .car-details-page {
-    padding: 20px;
+    padding: 10px;
   }
   
   .car-image-section {
@@ -118,5 +118,5 @@ select {
 }
 
 .details{
-  margin: 0;
+  margin: 0px;
 }

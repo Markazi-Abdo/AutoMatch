@@ -8,7 +8,7 @@ export default function DetailsHeader(props) {
     <div>
     <div className='navbar'>
       <h1>DETAILS</h1>
-      <img src={props.src} width={50}/>
+      <img src={props.src} width={50} />
     </div>
     <hr></hr>
     </div>

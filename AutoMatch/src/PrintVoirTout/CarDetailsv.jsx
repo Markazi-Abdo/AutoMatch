@@ -1,10 +1,10 @@
 import "../Print Page/style.css";
 import Car from "../Print Page/car";
 import App from '../Details/App'
-import Content from "../PrintVoirTout/Content";
+import Content from "./Content";
+import './styleDet.css'
 
-
-export default function CarDetails() {
+export default function CarDetailsv() {
 
   return (
     <div className="container-fluid car-details-page row">

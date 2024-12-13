@@ -1537,6 +1537,7 @@ const stateInitial = {
 };
 
 export default function Reduce(data =stateInitial, action) {
+
     switch(action.type){
         case 'INPUT':
             return {...data, searchText:action.payload.input,
@@ -1544,28 +1545,55 @@ export default function Reduce(data =stateInitial, action) {
 
         case 'MARQUE':
             return {...data, selectedMarque:action.payload.marqueSelectValue,
-                 filteredCars:filtering(data.cars, data.searchText, action.payload.marque, data.selectedModel)}
+                 filteredCars:filtering(data.cars, data.searchText, action.payload.marqueSelectValue, data.selectedModel)}
         
         case 'MODEL':
             return {...data, selectedModel:action.payload.modelSelectValue,
-                 filteredCars:filtering(data.cars, data.searchText, data.selectedMarque, action.payload.model)}
+                 filteredCars:filtering(data.cars, data.searchText, data.selectedMarque, action.payload.modelSelectValue)}
         
-        default : return data
+        default : return data //{...stateInitial, filteredCars:[...stateInitial.cars]}
 
     }}
 
 
 
 
-    function filtering(cars, searchText, selectedMarque, selectedModel) {
+ /*   function filtering(cars, searchText, selectedMarque, selectedModel) {
         return cars.filter((car) => {
             return car.models.some((model) => {
                 return Object.entries(model.detailsParAnnee).some(([annee, modelAnnee]) => {
                     const matchKeyword = modelAnnee.keyWords.some((keyword) => keyword.toLowerCase().includes(searchText.toLowerCase()));
-                    const matchMarque = selectedMarque ? car.marque.nom === selectedMarque : true;
+                    const matchMarque = selectedMarque ?car.marque.nom === selectedMarque : true; 
+                   console.log(selectedMarque);
                     const matchModel = selectedModel ? model.model === selectedModel : true;
+                    console.log(selectedModel);
+
                     return matchKeyword && matchMarque && matchModel;
                 });
             });
         });
+    }*///not correct
+
+    function filtering(cars, searchText, selectedMarque, selectedModel) {
+        return cars.filter((car) => {
+            // Check if the car matches the selected marque
+            const matchMarque = selectedMarque ? car.marque.nom === selectedMarque : true;
+    
+            return matchMarque && car.models.some((model) => {
+                // Check if the model matches the selected model
+                const matchModel = selectedModel ? model.model === selectedModel : true;
+
+    
+                return matchModel && Object.entries(model.detailsParAnnee).some(([annee, modelAnnee]) => {
+                    // Check if any keyword matches the search text
+                    const matchKeyword = modelAnnee.keyWords.some((keyword) => 
+                        keyword.toLowerCase().includes(searchText.toLowerCase())
+                    );
+    
+                    return matchKeyword;
+                });
+            });
+        });
     }
+    
+

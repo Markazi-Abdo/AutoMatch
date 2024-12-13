@@ -1,13 +1,26 @@
 import './Model.css'
-
-export default function Model(){
+import {useState} from 'react'
+export default function Model({cars, modelSelectCherche,modelNotif}){
+    const[modelSelectValue, setModelSelectValue]= useState('')
+    function handleChange(e){
+        setModelSelectValue(e.target.value)
+        modelSelectCherche(e.target.value)// e.target.value
+        modelNotif(e.target.value)
+    }
     return(
         <div className="model-container">
             <h3>Model</h3>
-            <select>
-                <option value="">Série Berline</option>
-                <option value="">rie Temara</option>
+            <select id='model' onChange={handleChange} value={modelSelectValue} >
+            <option value="">Select a model</option>
+               {
+                cars.map((car)=>{
+                    return  car.models.map((model)=>{
+                        return <option value={model.model} key={model.model}>{model.model}</option>
+                    })
+                })
+               } 
             </select>
+
         </div>
     )
 }
