@@ -1551,7 +1551,7 @@ export default function Reduce(data =stateInitial, action) {
             return {...data, selectedModel:action.payload.modelSelectValue,
                  filteredCars:filtering(data.cars, data.searchText, data.selectedMarque, action.payload.modelSelectValue)}
         
-        default : return data //{...stateInitial, filteredCars:[...stateInitial.cars]}
+        default : return {...stateInitial, filteredCars:[...stateInitial.cars]} //{...stateInitial, filteredCars:[...stateInitial.cars]}
 
     }}
 
