@@ -3,8 +3,30 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-}
+ 
 
-main{
+
+}
+body{
+overflow: auto;
+}
+.voirTout{
+    position: relative;
     display: flex;
+    
+}
+.bodyShop{
+    top: 2px;
+    right: 0px;
+}
+.main{
+    position: relative;
+    width: 700px;
+    right: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+aside{
+    position: relative;
+    width: 350px;
 }

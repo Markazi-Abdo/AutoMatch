@@ -1528,8 +1528,147 @@ const stateInitial = {
                 }
             ]
         }
-    ]
-}
-export default function Reduce(data =stateInitial) {
-            return data;
-}
+    ],
+    searchText:"",
+    selectedMarque:"",
+    selectedModel:"",
+    selectMinPrice: null,
+    selectMaxPrice: null,
+    selectedCarburant : "",
+    selectedTransmission: "",
+    filteredCars:[]
+    
+};
+
+export default function Reduce(data =stateInitial, action) {
+
+    switch(action.type){
+        case 'INPUT':
+            return {...data, searchText:action.payload.input,
+                 filteredCars:filtering(data.cars, action.payload.input, data.selectedMarque, data.selectedModel)}
+
+        case 'MARQUE':
+            return {...data, selectedMarque:action.payload.marqueSelectValue,
+                 filteredCars:filtering(data.cars, data.searchText, action.payload.marqueSelectValue, data.selectedModel)}
+        
+        case 'MODEL':
+            return {...data, selectedModel:action.payload.modelSelectValue,
+                 filteredCars:filtering(data.cars, data.searchText, data.selectedMarque, action.payload.modelSelectValue)}
+
+        case 'MIN_MAX_PRICE':
+            return {
+                ...data,
+                selectMinPrice: action.payload.minPrice,
+                selectMaxPrice: action.payload.maxPrice,
+                filteredCars: filtering(
+                    data.cars,
+                    data.searchText,
+                    data.selectedMarque,
+                    data.selectedModel,
+                    action.payload.minPrice,
+                    action.payload.maxPrice
+                )
+            };
+
+        case 'CARBURANT':
+            console.log(action.payload)
+            return {
+                ...data, 
+                selectedCarburant: action.payload.carburant,
+                filteredCars: filtering(
+                    data.cars, 
+                    data.searchText, 
+                    data.selectedMarque, 
+                    data.selectedModel, 
+                    data.selectMinPrice, 
+                    data.selectMaxPrice,
+                    action.payload.carburant, 
+                )
+            };
+
+        case 'TRANSMISSION':
+            return {
+                ...data, 
+                selectedTransmission: action.payload.transmission, 
+                filteredCars: filtering(
+                    data.cars, 
+                    data.searchText, 
+                    data.selectedMarque, 
+                    data.selectedModel, 
+                    data.selectMinPrice, 
+                    data.selectMaxPrice, 
+                    data.selectedCarburant,
+                    action.payload.transmission ,
+                )
+            };
+                
+            case 'RESET':
+                return {
+                  ...data,
+                  searchText: "", 
+                  selectedMarque: "", 
+                  selectedModel: "", 
+                  selectedCarburant: "", 
+                  selectedTransmission: "", 
+                  selectMinPrice: 20000, // Reset min price
+                  selectMaxPrice: 90000, // Reset max price
+                  filteredCars: data.cars, // Show all cars initially
+                };
+                     
+        
+        default : return {...stateInitial, filteredCars:[...stateInitial.cars]} //{...stateInitial, filteredCars:[...stateInitial.cars]}
+
+    }}
+
+
+
+
+ /*   function filtering(cars, searchText, selectedMarque, selectedModel) {
+        return cars.filter((car) => {
+            return car.models.some((model) => {
+                return Object.entries(model.detailsParAnnee).some(([annee, modelAnnee]) => {
+                    const matchKeyword = modelAnnee.keyWords.some((keyword) => keyword.toLowerCase().includes(searchText.toLowerCase()));
+                    const matchMarque = selectedMarque ?car.marque.nom === selectedMarque : true; 
+                   console.log(selectedMarque);
+                    const matchModel = selectedModel ? model.model === selectedModel : true;
+                    console.log(selectedModel);
+
+                    return matchKeyword && matchMarque && matchModel;
+                });
+            });
+        });
+    }*///not correct
+
+    function filtering(cars, searchText, selectedMarque, selectedModel, minPrice, maxPrice, selectedCarburant, selectedTransmission) {
+        return cars.filter((car) => {
+          const matchMarque = selectedMarque ? car.marque.nom === selectedMarque : true;
+          
+          return matchMarque && car.models.some((model) => {
+            const matchModel = selectedModel ? model.model === selectedModel : true;
+            
+            return matchModel && Object.entries(model.detailsParAnnee).some(([annee, modelAnnee]) => {
+              
+              const matchCarburant = selectedCarburant ? modelAnnee.carburant === selectedCarburant : true;
+            
+              const matchTransmission = selectedTransmission ? modelAnnee.transmission === selectedTransmission : true;
+      
+              const matchPrice = minPrice && maxPrice
+                ? parseFloat(modelAnnee.price.replace(",", "").replace("€", "")) >= minPrice &&
+                  parseFloat(modelAnnee.price.replace(",", "").replace("€", "")) <= maxPrice
+                : true;
+                
+              const matchKeyword = searchText
+                ? modelAnnee.keyWords.some((keyword) => keyword.toLowerCase().includes(searchText.toLowerCase()))
+                : true;
+      
+              return matchCarburant && matchTransmission && matchPrice && matchKeyword;
+            });
+          });
+        });
+      }
+
+    
+      
+    
+    
+

@@ -5,8 +5,8 @@ export default function Bande() {
             <div className={Style.Bande}>
                 <ul className={Style.ListBande}>
                     
-                    <li><span></span>Choix de Marque</li>
-                    <li>Choix de Model</li>
+                    <li>Choix de Marque</li>
+                    <li><span></span>Choix de Model</li>
                     <li>Filtrage Detailler</li>
                 </ul>
             </div>

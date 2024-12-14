@@ -14,12 +14,23 @@
     padding: 8px;
 }
 
+.ListBande li span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--orangeColor--);
+    height: 4px;
+}
 .Title h1 {
     text-align: center;
     color: azure;
     font-size: 2rem;
 }
-
+.ListBande li:nth-child(2){
+    background-color: var(--blueColor--);
+    
+}
 /* Style pour le pied de page */
 .Footer {
     
@@ -141,7 +152,7 @@
 }
 
 .cardMarque:hover {
-    border: solid 2px var(--blueColor--);
+    border: solid 1px var(--blueColor--);
     transform: scale(1.05);
 }
 

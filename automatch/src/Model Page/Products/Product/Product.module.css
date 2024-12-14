@@ -1,0 +1,60 @@
+.card {
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    margin: 15px;
+    width: 250px;
+    position: relative;
+    box-shadow: 0 0 17px rgba(0, 0, 0, 0.742);
+}
+
+.card .header img {
+    height: 100px;
+    display: inline-block;
+    text-align: center;
+}
+
+.card .header .color .green {
+    background: green;
+    margin: 0;
+}
+
+.card .header .color .blue {
+    background: blue;
+    margin: 0;
+}
+
+.card .header .color .brown {
+    background: brown;
+    margin: 0;
+}
+
+.card .header .color .black {
+    background: black;
+    margin: 0;
+}
+
+.card .header .color {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    z-index: 2;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+.card .header .logo {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    z-index: 3;
+}
+
+.card .header .logo img {
+    height: 35px;
+}
+

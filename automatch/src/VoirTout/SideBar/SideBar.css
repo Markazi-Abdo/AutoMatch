@@ -5,7 +5,10 @@
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
     min-height: 900px;
-    width: 355px;
+    overflow: hidden;
+    width: 350px;
+    
+    
 }
 
 .sidebar-container .titles{

@@ -5,7 +5,7 @@ import Model from './Model';
 
 
 
-export default function App(){
+export default function ModelApp(){
     return(
         <div className="">
             <Header/>

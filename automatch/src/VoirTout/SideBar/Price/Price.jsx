@@ -1,20 +1,32 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
 import "./Style.css";
 
 const Price = () => {
-  const [leftValue, setLeftValue] = useState(200000);
-  const [rightValue, setRightValue] = useState(900000);
+  const dispatch = useDispatch();
+  const [leftValue, setLeftValue] = useState(20000);
+  const [rightValue, setRightValue] = useState(90000);
 
-  const min = 200000;
-  const max = 900000;
+  const min = 20000;
+  const max = 90000;
 
   const updateLeftValue = (value) => {
-    setLeftValue((prev) => Math.min(value, rightValue));
+    const newValue = Math.min(value, rightValue);
+    setLeftValue(newValue); // Update state first
   };
 
   const updateRightValue = (value) => {
-    setRightValue((prev) => Math.max(value, leftValue));
+    const newValue = Math.max(value, leftValue);
+    setRightValue(newValue); // Update state first
   };
+
+  // Dispatch the new price range whenever leftValue or rightValue changes
+  useEffect(() => {
+    dispatch({
+      type: "MIN_MAX_PRICE",
+      payload: { minPrice: leftValue, maxPrice: rightValue },
+    });
+  }, [leftValue, rightValue, dispatch]); // Dependency on leftValue and rightValue
 
   const leftPercent = ((leftValue - min) / (max - min)) * 100;
   const rightPercent = ((rightValue - min) / (max - min)) * 100;
@@ -52,7 +64,7 @@ const Price = () => {
         <span
           className="label"
           style={{
-            left: `calc(${leftPercent}% - 20px)`, // Adjust position to center the label
+            left: `calc(${leftPercent}% - 20px)`,
           }}
         >
           {leftValue.toLocaleString()}
@@ -60,7 +72,7 @@ const Price = () => {
         <span
           className="label second"
           style={{
-            left: `calc(${rightPercent}% - 20px)`, // Adjust position to center the label
+            left: `calc(${rightPercent}% - 20px)`,
           }}
         >
           {rightValue.toLocaleString()}
