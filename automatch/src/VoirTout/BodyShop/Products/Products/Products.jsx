@@ -31,7 +31,7 @@ export default function Products({ cars, modelN }) {
   return (
     <div className="cars-container">
       {cars.length === 0 ? (
-        <p style={{ textAlign: "center" }}>Pas de Match</p>
+        <span  className="error">Pas de Match</span>
       ) : (
         cars.map((car) => {
           console.log("product" + modelN);
@@ -60,7 +60,7 @@ export default function Products({ cars, modelN }) {
 
       {isVisible && (
         <div className="to-top-button">
-          <button onClick={scrollToTop} className="upTop">
+          <button onClick={scrollToTop} className="upTopButton">
             <FontAwesomeIcon icon={faArrowUp} />
           </button>
         </div>

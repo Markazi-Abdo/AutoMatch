@@ -17,7 +17,7 @@
     margin-bottom: 15px;
 }
 
-.sidebar-container .titles h4{
+.sidebar-container .titles .reset{
     color: #2e77ae;
     cursor: pointer;
     transition: 0.5s;

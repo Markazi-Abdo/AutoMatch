@@ -4,10 +4,10 @@ import "./Style.css";
 
 const Price = () => {
   const dispatch = useDispatch();
-  const [leftValue, setLeftValue] = useState("20000");
+  const [leftValue, setLeftValue] = useState("10000");
   const [rightValue, setRightValue] = useState("60000");
 
-  const min = "20000";
+  const min = "10000";
   const max = "60000";
 
   const updateLeftValue = (value) => {
@@ -47,17 +47,17 @@ const Price = () => {
           type="range"
           min={min}
           max={max}
-          step={10000}
+          step={5000}
           value={leftValue}
-          onChange={(e) => updateLeftValue(parseInt(e.target.value))}
+          onChange={(e) => updateLeftValue(parseFloat(e.target.value))}
         />
         <input
           type="range"
           min={min}
           max={max}
-          step={10000}
+          step={5000}
           value={rightValue}
-          onChange={(e) => updateRightValue(parseInt(e.target.value))}
+          onChange={(e) => updateRightValue(parseFloat(e.target.value))}
         />
       </div>
       <div className="labels">

@@ -17,11 +17,11 @@ export default function SideBar() {
   return (
     <div className="sidebar-container">
       <div className="titles">
-        <h3>Filters</h3>
-        <h4 onClick={handleResetAll} style={{ cursor: 'pointer' }}>Reset All</h4>
+        <h4>Filters</h4>
+        <h5 onClick={handleResetAll} style={{ cursor: 'pointer' }} className='reset'>Reset All</h5>
       </div>
       <div className="components">
-        <h4>Fourchettes de prix</h4>
+        <h5>Fourchettes de prix</h5>
         <Price />
         <CarbTrans />
         <Options />

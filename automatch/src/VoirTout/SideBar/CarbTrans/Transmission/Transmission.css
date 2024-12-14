@@ -4,7 +4,28 @@
     margin: 10px 0 10px;
 }
 
-.trans-options button{
+.trans-options .Manuelle{
+    background: #b6b7b7;
+    border: 2px solid #2e77ae;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    color: #2e77ae;
+    padding: 7px;
+    transition: 0.5s;
+
+}
+.trans-options .Automatique{
+    background: #b6b7b7;
+    border: 2px solid #2e77ae;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    color: #2e77ae;
+    padding: 7px;
+    transition: 0.5s;
+
+}
+.trans-options .Semi-Automatique{
+    background: #b6b7b7;
     border: 2px solid #2e77ae;
     border-radius: 50px;
     font-size: 0.75rem;
@@ -15,6 +36,11 @@
 }
 
 .trans-options button:hover{
+    background: #2e77ae;
+    color: white;
+    transition: 0.5s;
+}
+.trans-options button:focus{
     background: #2e77ae;
     color: white;
     transition: 0.5s;

@@ -18,12 +18,10 @@ function AppVoirTout({cars, filteredCars, inputCherche, marqueSelectCherche, mod
   function modelNotif(selectedModel){
     setModelN(selectedModel)
   }
-  return(<div>
+  return(
+  <div>
     <Header />
     <div className="voirTout">
-      <div className="header">
-        
-      </div>
       <aside>
           <SideBar/>
       </aside>
@@ -38,7 +36,7 @@ function AppVoirTout({cars, filteredCars, inputCherche, marqueSelectCherche, mod
       </main>
 
     </div>
-    </div>
+  </div>
     
   )
 }

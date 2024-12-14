@@ -10,7 +10,7 @@ export default function Input({inputCherche}){
     return(
         <div className="input-container">
             <input type="text" placeholder='Exemple: "famille"' value={input} onChange={(e)=>{setInput(e.target.value)}}/>
-            <button onClick={handleCherche}>Chercher</button>
+            <button onClick={handleCherche} className='input'>Chercher</button>
         </div>
     )
 }

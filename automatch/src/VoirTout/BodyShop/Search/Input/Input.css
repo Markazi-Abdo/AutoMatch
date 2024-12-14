@@ -8,7 +8,7 @@
     transition: 0.5s;
 }
 
-.input-container button{
+.input-container .input{
     border: 1px solid;
     outline: none;
     color: white;

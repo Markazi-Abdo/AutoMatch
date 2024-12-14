@@ -23,19 +23,19 @@ export default function Transmission() {
       <div className="trans-options">
         <button 
           onClick={() => handleTransmissionSelect('Manuelle')} 
-          className={selectedTransmission === 'Manuelle' ? 'selected' : ''}
+          className= 'Manuelle'
         >
           Manuelle
         </button>
         <button 
           onClick={() => handleTransmissionSelect('Automatique')} 
-          className={selectedTransmission === 'Automatique' ? 'selected' : ''}
+          className= 'Automatique'
         >
           Automatique
         </button>
         <button 
           onClick={() => handleTransmissionSelect('Semi-Automatique')} 
-          className={selectedTransmission === 'Semi-Automatique' ? 'selected' : ''}
+          className= 'Semi-Automatique'
         >
           Semi-Automatique
         </button>

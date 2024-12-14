@@ -1532,8 +1532,8 @@ const stateInitial = {
     searchText:"",
     selectedMarque:"",
     selectedModel:"",
-    selectMinPrice: "20,000",
-    selectMaxPrice: "90,000",
+    selectMinPrice: "10,000",
+    selectMaxPrice: "60,000",
     selectedCarburant : "",
     selectedTransmission: "",
     filteredCars:[]
@@ -1610,7 +1610,7 @@ export default function Reduce(data =stateInitial, action) {
                   selectedModel: "", 
                   selectedCarburant: "", 
                   selectedTransmission: "", 
-                  selectMinPrice: "20,000", // Reset min price
+                  selectMinPrice: "10,000", // Reset min price
                   selectMaxPrice: "60,000", // Reset max price
                   filteredCars: data.cars, // Show all cars initially
                 };

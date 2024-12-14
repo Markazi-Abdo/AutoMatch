@@ -2,22 +2,23 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
- 
-
-
+   
 }
+
 body{
 overflow: auto;
 }
+
 .voirTout{
     position: relative;
     display: flex;
     
 }
+
 .bodyShop{
     top: 2px;
     right: 0px;
+    
 }
 .main{
     position: relative;

@@ -4,11 +4,8 @@ import './Carburant.css';
 
 export default function Carburant() {
   const dispatch = useDispatch();
-
-  // Local state to handle selected carburant
   const [selectedCarburant, setSelectedCarburant] = useState("");
 
-  // Handle carburant selection
   const handleCarburantSelect = (carburantType) => {
     setSelectedCarburant(carburantType);
     dispatch({
@@ -23,25 +20,25 @@ export default function Carburant() {
       <div className="car-options">
         <button 
           onClick={() => handleCarburantSelect('Essence')} 
-          className={selectedCarburant === 'Essence' ? 'selected' : ''}
+          className="Essence"
         >
           Essence
         </button>
         <button 
           onClick={() => handleCarburantSelect('Diesel')} 
-          className={selectedCarburant === 'Diesel' ? 'selected' : ''}
+          className="Diesel"
         >
           Diesel
         </button>
         <button 
           onClick={() => handleCarburantSelect('Hybride')} 
-          className={selectedCarburant === 'Hybride' ? 'selected' : ''}
+          className="Hybride"
         >
           Hybride
         </button>
         <button 
           onClick={() => handleCarburantSelect('Électrique')} 
-          className={selectedCarburant === 'Électrique' ? 'selected' : ''}
+          className="Electrique"
         >
           Electrique
         </button>
