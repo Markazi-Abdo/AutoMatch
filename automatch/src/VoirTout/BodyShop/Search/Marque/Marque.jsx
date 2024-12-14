@@ -16,7 +16,7 @@ export default function Marque({cars, marqueSelectCherche, handleMarqueToModel})
             <h3>Marque</h3>
             <select id="marque" value={marqueSelectValue} onChange={handleChange}>
                 
-            <option value="">Select a marque</option>
+            <option value="">Marque</option>
             {cars.map((car)=>{
                 return <option key={car.marque.nom}
                 value={car.marque.nom} >{car.marque.nom}</option>

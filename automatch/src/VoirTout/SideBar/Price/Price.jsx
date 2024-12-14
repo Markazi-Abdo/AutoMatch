@@ -4,29 +4,29 @@ import "./Style.css";
 
 const Price = () => {
   const dispatch = useDispatch();
-  const [leftValue, setLeftValue] = useState(20000);
-  const [rightValue, setRightValue] = useState(90000);
+  const [leftValue, setLeftValue] = useState("20000");
+  const [rightValue, setRightValue] = useState("60000");
 
-  const min = 20000;
-  const max = 90000;
+  const min = "20000";
+  const max = "60000";
 
   const updateLeftValue = (value) => {
     const newValue = Math.min(value, rightValue);
-    setLeftValue(newValue); // Update state first
+    setLeftValue(newValue);
   };
 
   const updateRightValue = (value) => {
     const newValue = Math.max(value, leftValue);
-    setRightValue(newValue); // Update state first
+    setRightValue(newValue);
   };
 
-  // Dispatch the new price range whenever leftValue or rightValue changes
+
   useEffect(() => {
     dispatch({
       type: "MIN_MAX_PRICE",
-      payload: { minPrice: leftValue, maxPrice: rightValue },
+      payload: { minPrice: parseFloat(leftValue), maxPrice: parseFloat(rightValue) },
     });
-  }, [leftValue, rightValue, dispatch]); // Dependency on leftValue and rightValue
+  }, [leftValue, rightValue, dispatch]); 
 
   const leftPercent = ((leftValue - min) / (max - min)) * 100;
   const rightPercent = ((rightValue - min) / (max - min)) * 100;

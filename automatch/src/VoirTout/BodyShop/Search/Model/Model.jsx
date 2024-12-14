@@ -11,7 +11,7 @@ export default function Model({cars, modelSelectCherche,modelNotif}){
         <div className="model-container">
             <h3>Model</h3>
             <select id='model' onChange={handleChange} value={modelSelectValue} >
-            <option value="">Select a model</option>
+            <option value="">Model</option>
                {
                 cars.map((car)=>{
                     return  car.models.map((model)=>{

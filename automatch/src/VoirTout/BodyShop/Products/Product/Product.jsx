@@ -15,15 +15,16 @@ export default function Product({ id, marque, annee, details, model }) {
         <img src={firstColorSrc} alt="Car Image" />
         <div className="color" >
         {Object.entries(details.colors).map(([colorName, colorData]) => {
+          const isWhite = colorData.code === "#FFFFFF";
           return (
             
-              <button className={colorName} key={colorName}></button>
+              <button className="colorButtons" key={colorName} style={{background:colorData.code, border: isWhite ? "1px solid #000" : "none",}}></button>
             
           );
         })}
         </div>
         <div className="logo">
-          <img src="./cmc-logo.png" alt="" />
+          <img src={marque.logo} alt="" />
         </div>
       </div>
       <div className="body">

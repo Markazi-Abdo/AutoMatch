@@ -1532,8 +1532,8 @@ const stateInitial = {
     searchText:"",
     selectedMarque:"",
     selectedModel:"",
-    selectMinPrice: null,
-    selectMaxPrice: null,
+    selectMinPrice: "20,000",
+    selectMaxPrice: "90,000",
     selectedCarburant : "",
     selectedTransmission: "",
     filteredCars:[]
@@ -1610,8 +1610,8 @@ export default function Reduce(data =stateInitial, action) {
                   selectedModel: "", 
                   selectedCarburant: "", 
                   selectedTransmission: "", 
-                  selectMinPrice: 20000, // Reset min price
-                  selectMaxPrice: 90000, // Reset max price
+                  selectMinPrice: "20,000", // Reset min price
+                  selectMaxPrice: "60,000", // Reset max price
                   filteredCars: data.cars, // Show all cars initially
                 };
                      
@@ -1653,8 +1653,8 @@ export default function Reduce(data =stateInitial, action) {
               const matchTransmission = selectedTransmission ? modelAnnee.transmission === selectedTransmission : true;
       
               const matchPrice = minPrice && maxPrice
-                ? parseFloat(modelAnnee.price.replace(",", "").replace("€", "")) >= minPrice &&
-                  parseFloat(modelAnnee.price.replace(",", "").replace("€", "")) <= maxPrice
+                ? parseFloat(modelAnnee.price.replace(/[,€\s]/g, '')) >= parseFloat(minPrice) &&
+                    parseFloat(modelAnnee.price.replace(/[,€\s]/g, '')) <= parseFloat(maxPrice)
                 : true;
                 
               const matchKeyword = searchText
