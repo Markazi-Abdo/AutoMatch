@@ -40,8 +40,8 @@ export default function Carburant() {
           Hybride
         </button>
         <button 
-          onClick={() => handleCarburantSelect('Electrique')} 
-          className={selectedCarburant === 'Electrique' ? 'selected' : ''}
+          onClick={() => handleCarburantSelect('Électrique')} 
+          className={selectedCarburant === 'Électrique' ? 'selected' : ''}
         >
           Electrique
         </button>
