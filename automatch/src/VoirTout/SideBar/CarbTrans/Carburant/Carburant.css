@@ -46,3 +46,9 @@
     color: white;
     transition: 0.5s;
 }
+
+.car-options button:focus{
+    background: #2e77ae;
+    color: white;
+    transition: 0.5s;
+}

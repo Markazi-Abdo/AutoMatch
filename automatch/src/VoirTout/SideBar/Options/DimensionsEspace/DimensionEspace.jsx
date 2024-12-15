@@ -36,9 +36,11 @@ export default function DimensionEspace() {
       {isOpen && (
         <div className="body">
           <h5>Espace</h5>
-          <button onClick={() => selectPlace(2)}>2 places</button>
-          <button onClick={() => selectPlace(4)}>4 places</button>
-          <button onClick={() => selectPlace(">4")}>4&gt; places</button>
+          <div className="places">
+            <button onClick={() => selectPlace(2)} className='place'>2 places</button>
+            <button onClick={() => selectPlace(4)} className='place'>4 places</button>
+            <button onClick={() => selectPlace(">4")} className='place'>&gt; 4places</button>
+          </div>
         </div>
       )}
     </div>
