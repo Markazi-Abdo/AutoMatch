@@ -1,0 +1,124 @@
+/* Général pour la page */
+.body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 46vh;
+    position: relative;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+/* Style de la carte */
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    width: 30%;
+
+    height: 100%;
+    padding: 5px;
+    border: 2px solid #6aa84f;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-bottom: 7px;
+}
+
+/* Conteneur du bouton radio */
+.radio_container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.radio_container input[type="radio"] {
+    display: none; /* Cache l'input radio */
+}
+
+.radio_container label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #6aa84f;
+    border-radius: 40%;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Bouton radio sélectionné */
+.radio_container input[type="radio"]:checked + label {
+
+    background-color: #6aa84f;
+    border-color: #6aa84f;
+}
+
+.radio_container input[type="radio"]:checked + label::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Contenu de la carte */
+.card_content {
+    margin-left: 40px; /* Décalage pour laisser de la place au bouton radio */
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 10px;
+}
+
+.plan_name {
+
+    font-size: 15px;
+    font-weight: bold;
+    color: #6aa84f;
+}
+
+.model {
+    font-size: 18px;
+    color: #6aa84f;
+}
+
+.price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.amount {
+    font-size: 24px;
+    font-weight: bold;
+    bottom: 10px;
+    position: absolute;
+    right: calc(50% - 45px);
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features li {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 5px;
+}

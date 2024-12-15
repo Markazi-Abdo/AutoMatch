@@ -1,19 +1,21 @@
 import "./style.css"
-export default function Colors(){
+export default function Colors(props){
 return (
     <div className="colors-label">
-    <label>
-            <input type="radio" checked name="color" />
-            <span className="color-option color-green"></span>
-        </label>
-        <label>
-            <input type="radio" name="color" />
-            <span className="color-option color-blue"></span>
-        </label>
-        <label>
-            <input type="radio" name="color" />
-            <span className="color-option color-red"></span>
-        </label>
+        {Object.keys(props.anne.colors || {}).map((color, colorIndex) => (
+                                console.log(props.anne.colors[color].code),
+                                <label
+                                    key={colorIndex}
+
+                                    
+                                >
+                                    <input type="radio" name="color" />
+                                    <span className="color-option" 
+                                    style={{ backgroundColor: props.anne.colors[color].code }}
+                                    ></span>
+                                </label>
+
+                            ))}
     </div>
 )
 }

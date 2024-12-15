@@ -57,20 +57,25 @@ export default function Model({id, data, marqueImg }) {
         <>
             {/*Object.entries(detailsParAnnee) return an array of key-value*/}
             {Object.entries(detailsParAnnee).map(([year, details], index) => (
-                <div key={index} className={styles.card} onClick={() => {
+                
+                <div key={index}
+                className={styles.card}
+                   
+                    onClick={() => {
                     setModelSelected(model);
                     setAnnéeSelected(year)
+
                 }}>
                     <div className={styles.header} >
-                        <img src={Object.values(details.colors)[0].image} alt={`${model} Image`} /> {/* Replace with actual image if available */}
+                        <img src={Object.values(details.colors)[0].image} alt={`${model} Image`}  /> 
                         <div className={styles.logo}>
-                            <img src={marqueImg} alt="Car Logo" />
+                            <img src={marqueImg} alt="Car Logo" className={styles.imgLogo} />
                         </div>
                     </div>
                     <div className={styles.body}>
                         <h5>{model}</h5> {/* Display model name */}
                         <h6>{year}</h6> {/* Display the year */}
-                        <p>Price: {details.price}</p> {/* Display the price */}
+                        <p>Price: {details.price} €</p> {/* Display the price */}
 
                         {/* Dynamic colors */}
                         <div className={styles.color}>
@@ -85,11 +90,14 @@ export default function Model({id, data, marqueImg }) {
                             ))}
                         </div>
                     </div>
+
+                    
                 </div>
             ))}
+            
             {/* <FooterModel annéeSelected= {annéeSelected} modelSelected={modelSelected} /> */}
-            {annéeSelected && modelSelected && (
-    <FooterModel annéeSelected={annéeSelected} id={id} modelSelected={modelSelected} />
+            {annéeSelected  && (
+    <FooterModel  annéeSelected={annéeSelected} id={id} modelSelected={modelSelected} />
 )}
         </>
     );

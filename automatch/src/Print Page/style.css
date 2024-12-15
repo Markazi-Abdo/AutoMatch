@@ -31,7 +31,7 @@
   .color-options {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 5px;
     margin-top: 10px;
   }
   
@@ -47,29 +47,32 @@
 
 #carImage{
     position: relative;
-
 }
 img{
     transition: 1s;
 }
 #carImage2{
     position: absolute;
+    height: 280px;
 }
-.prix{
+.position-relative{
   position: absolute;
-  top: -275px;
-  right: 20px;
+  top: -200px;
+  left: 530px;
   font-weight: bold;
   color: var(--orangeColor);
   font-size: 20px;
 }
+.all{
+  overflow: hidden;
+}
 .color-option {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     border-radius: 10%;
     display: inline-block;
     cursor: pointer;
-    border: 2px solid transparent;
+    border: 1px solid black;
 }
 .color-option:checked{
     border: 1px solid black;
@@ -80,25 +83,23 @@ img{
 label{
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
+    gap: 15px;
 
     
 }
 .dh{
-  position: absolute;
-    top:-268px;
-    right: 90px;
-    font-weight: bold;
-    font-size: 13px;
-    color: var(--blue);
+  color: var(--blue);
+  font-size: 15px;
+  margin-right: 10px;
+
 }
 .figure{
   width: 30px;
   height: 5px;
+  position: absolute;
+  left: 60px;
   background-color: var(--blue);
-  position: relative;
-  top: -259px;
-  right: -693px;
+
 }
 .colors-label{
   position: absolute;
@@ -119,4 +120,13 @@ select {
 
 .details{
   margin: 0;
+}
+.car-image {
+  top: 20px;
+  width: 100%; /* Full width of the container */
+  height: auto; /* Maintain the aspect ratio */
+  min-height: 250px;
+  max-height:250px; /* Restrict the maximum height */
+  object-fit: contain; /* Ensure the entire image is visible within the container */
+  box-sizing: border-box; /* Include border in size calculation */
 }

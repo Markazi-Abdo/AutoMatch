@@ -7,6 +7,9 @@
     position: relative;
     box-shadow: 0 0 17px rgba(0, 0, 0, 0.742);
 }
+.selected{
+  border: 2px solid #ff8e2b;
+}
 /* Default style for all color buttons */
 .color button {
     border: 1px solid black;
@@ -59,6 +62,9 @@
     height: 100px;
     display: inline-block;
     text-align: center;
+}
+.imgLogo{
+  aspect-ratio: 6 / 6;
 }
 /* 
 .card .header .color .green {

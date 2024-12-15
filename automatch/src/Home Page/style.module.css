@@ -149,7 +149,7 @@ h6{
 }
 
 .button:hover{
-    background-color: var(--blueColor);
+    background-color: var(--orangeColor);
     box-shadow: 0px 4px 12px var(--orangeColor);
     transform: scale(1.05);
 }

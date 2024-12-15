@@ -1,3 +1,4 @@
+import FullScreen from "../FullScreen"
 export default function Nav(){
     return(
                         //BOOTSTRAP 4 !!!
@@ -6,6 +7,10 @@ export default function Nav(){
 
                 {/* !!!!------ LOGO CMC ------ !!!!!*/}
                 <img src="./cmc-logo.png" alt="cmcLogo" width='70px' />
+                
+                
+                <FullScreen   />
+
 
                 {/* !!!!!------ HOME ICON ------ !!!!!*/}
                 <img src="./home.png" width='40' height='40px' alt="homeIcon"/>

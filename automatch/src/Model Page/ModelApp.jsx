@@ -1,6 +1,5 @@
 import Header from "../Header/Header";
 import Bande from "./Bande";
-import Footer from "./Footer";
 import Model from './Model';
 
 
