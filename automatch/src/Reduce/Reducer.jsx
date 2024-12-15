@@ -1536,6 +1536,7 @@ const stateInitial = {
     selectMaxPrice: "60,000",
     selectedCarburant : "",
     selectedTransmission: "",
+    selectedPlaces: "",
     filteredCars:[]
     
 };
@@ -1601,6 +1602,22 @@ export default function Reduce(data =stateInitial, action) {
                     action.payload.transmission ,
                 )
             };
+        case 'FILTER_PLACE':
+            return {
+                ...data,
+                selectedPlace: action.payload.place,
+                filteredCars: filtering(
+                    data.cars, 
+                    data.searchText, 
+                    data.selectedMarque, 
+                    data.selectedModel, 
+                    data.selectMinPrice, 
+                    data.selectMaxPrice, 
+                    data.selectedCarburant,
+                    data.selectedTransmission,
+                    action.payload.place
+                ),
+            };    
                 
             case 'RESET':
                 return {
@@ -1639,7 +1656,7 @@ export default function Reduce(data =stateInitial, action) {
         });
     }*///not correct
 
-    function filtering(cars, searchText, selectedMarque, selectedModel, minPrice, maxPrice, selectedCarburant, selectedTransmission) {
+    function filtering(cars, searchText, selectedMarque, selectedModel, minPrice, maxPrice, selectedCarburant, selectedTransmission, selectedPlace) {
         return cars.filter((car) => {
           const matchMarque = selectedMarque ? car.marque.nom === selectedMarque : true;
           
@@ -1656,12 +1673,19 @@ export default function Reduce(data =stateInitial, action) {
                 ? parseFloat(modelAnnee.price.replace(/[,€\s]/g, '')) >= parseFloat(minPrice) &&
                     parseFloat(modelAnnee.price.replace(/[,€\s]/g, '')) <= parseFloat(maxPrice)
                 : true;
-                
+              
+                const matchPlace =
+                selectedPlace === ">4"
+                  ? modelAnnee.places > 4
+                  : selectedPlace
+                  ? modelAnnee.places === selectedPlace
+                  : true;
+
               const matchKeyword = searchText
                 ? modelAnnee.keyWords.some((keyword) => keyword.toLowerCase().includes(searchText.toLowerCase()))
                 : true;
       
-              return matchCarburant && matchTransmission && matchPrice && matchKeyword;
+              return matchCarburant && matchTransmission && matchPrice && matchKeyword && matchPlace;
             });
           });
         });
