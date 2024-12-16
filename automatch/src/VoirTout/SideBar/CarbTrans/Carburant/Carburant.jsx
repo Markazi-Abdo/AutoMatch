@@ -4,10 +4,7 @@ import './Carburant.css';
 
 export default function Carburant() {
   const dispatch = useDispatch();
-  const [selectedCarburant, setSelectedCarburant] = useState("");
-
   const handleCarburantSelect = (carburantType) => {
-    setSelectedCarburant(carburantType);
     dispatch({
       type: 'CARBURANT',
       payload: { carburant: carburantType },

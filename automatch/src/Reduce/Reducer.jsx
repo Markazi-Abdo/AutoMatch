@@ -1602,6 +1602,7 @@ export default function Reduce(data =stateInitial, action) {
                     action.payload.transmission ,
                 )
             };
+
         case 'FILTER_PLACE':
             return {
                 ...data,
@@ -1619,18 +1620,18 @@ export default function Reduce(data =stateInitial, action) {
                 ),
             };    
                 
-            case 'RESET':
-                return {
-                  ...data,
-                  searchText: "", 
-                  selectedMarque: "", 
-                  selectedModel: "", 
-                  selectedCarburant: "", 
-                  selectedTransmission: "", 
-                  selectMinPrice: "10,000", // Reset min price
-                  selectMaxPrice: "60,000", // Reset max price
-                  filteredCars: data.cars, // Show all cars initially
-                };
+        case 'RESET':
+            return {
+                ...data,
+                searchText: "", 
+                selectedMarque: "", 
+                selectedModel: "", 
+                selectedCarburant: "", 
+                selectedTransmission: "", 
+                selectMinPrice: "10,000", // Reset min price
+                selectMaxPrice: "60,000", // Reset max price
+                filteredCars: data.cars, // Show all cars initially
+            };
                      
         
         default : return {...stateInitial, filteredCars:[...stateInitial.cars]} //{...stateInitial, filteredCars:[...stateInitial.cars]}
@@ -1665,21 +1666,22 @@ export default function Reduce(data =stateInitial, action) {
             
             return matchModel && Object.entries(model.detailsParAnnee).some(([annee, modelAnnee]) => {
               
-              const matchCarburant = selectedCarburant ? modelAnnee.carburant === selectedCarburant : true;
-            
-              const matchTransmission = selectedTransmission ? modelAnnee.transmission === selectedTransmission : true;
-      
-              const matchPrice = minPrice && maxPrice
+                
+                const matchPrice = minPrice && maxPrice
                 ? parseFloat(modelAnnee.price.replace(/[,€\s]/g, '')) >= parseFloat(minPrice) &&
-                    parseFloat(modelAnnee.price.replace(/[,€\s]/g, '')) <= parseFloat(maxPrice)
+                parseFloat(modelAnnee.price.replace(/[,€\s]/g, '')) <= parseFloat(maxPrice)
                 : true;
-              
+                
                 const matchPlace =
                 selectedPlace === ">4"
-                  ? modelAnnee.places > 4
-                  : selectedPlace
-                  ? modelAnnee.places === selectedPlace
-                  : true;
+                ? modelAnnee.places > 4
+                : selectedPlace
+                ? modelAnnee.places === selectedPlace
+                : true;
+                
+                const matchCarburant = selectedCarburant ? modelAnnee.carburant === selectedCarburant : true;
+              
+                const matchTransmission = selectedTransmission ? modelAnnee.transmission === selectedTransmission : true;
 
               const matchKeyword = searchText
                 ? modelAnnee.keyWords.some((keyword) => keyword.toLowerCase().includes(searchText.toLowerCase()))

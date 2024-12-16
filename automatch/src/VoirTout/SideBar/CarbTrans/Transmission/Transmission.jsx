@@ -5,15 +5,10 @@ import './Transmission.css';
 export default function Transmission() {
   const dispatch = useDispatch();
 
-  // Local state to handle selected transmission type
-  const [selectedTransmission, setSelectedTransmission] = useState("");
-
-  // Handle transmission selection
   const handleTransmissionSelect = (transmissionType) => {
-    setSelectedTransmission(transmissionType);
     dispatch({
       type: 'TRANSMISSION',
-      payload: { transmission: transmissionType }, // Dispatch selected transmission
+      payload: { transmission: transmissionType },
     });
   };
 
@@ -22,19 +17,19 @@ export default function Transmission() {
       <h3>Transmission</h3>
       <div className="trans-options">
         <button 
-          onClick={() => handleTransmissionSelect('Manuelle')} 
+          onClick={() => handleTransmissionSelect("Manuelle")} 
           className= 'Manuelle'
         >
           Manuelle
         </button>
         <button 
-          onClick={() => handleTransmissionSelect('Automatique')} 
+          onClick={() => handleTransmissionSelect("Automatique")} 
           className= 'Automatique'
         >
           Automatique
         </button>
         <button 
-          onClick={() => handleTransmissionSelect('Semi-Automatique')} 
+          onClick={() => handleTransmissionSelect("Semi-Automatique")} 
           className= 'Semi-Automatique'
         >
           Semi-Automatique
