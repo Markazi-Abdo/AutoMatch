@@ -1627,11 +1627,12 @@ export default function Reduce(data =stateInitial, action) {
                 searchText: "", 
                 selectedMarque: "", 
                 selectedModel: "", 
+                selectMinPrice: "10,000", 
+                selectMaxPrice: "60,000", 
                 selectedCarburant: "", 
                 selectedTransmission: "", 
-                selectMinPrice: "10,000", // Reset min price
-                selectMaxPrice: "60,000", // Reset max price
-                filteredCars: data.cars, // Show all cars initially
+                selectedPlaces: "",
+                filteredCars: data.cars, 
             };
         case SET_SELECTED_OPTION:
             return {

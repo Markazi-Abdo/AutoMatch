@@ -163,7 +163,7 @@ function App(props) {
       const hour = date.getHours();
       const minute = date.getMinutes();
       const second = date.getSeconds();
-      const timeString = `${day}/${month}/${year} ${hour}:${minute}:${second}`;
+      const timeString = `${day}/${month}/${year} - ${hour}:${minute}:${second}`;
       setTime(timeString);
     }, 1000);
     return () => clearInterval(interval);
@@ -180,20 +180,19 @@ function App(props) {
         <style>
           @media print {
             @page {
-              size: 35mm 57mm;
+              size: 80mm 210mm;
               margin: 0;
               pading:5px;
             }
 
             body {
-              font-size: 6px; 
-              width: 35mm; 
-              height: 57mm; 
-              pading:3px;
+              font-size: 18px; 
+              width: 420px; 
+              pading:10px;
               margin: 0;
               box-sizing: border-box;
               overflow: hidden; 
-              transform: scale(7.1); 
+              transform: scale(0.7); 
               transform-origin: top left;
             }
 
@@ -204,29 +203,32 @@ function App(props) {
             .details p {
               margin: 2px 0;
               line-height: 1em;
+
             }
 
             .header {
               display: flex;
-              justify-content: space-between;
+              gap:20px;
               margin-top: 2mm;
               margin-left: 2mm;
               margin-right: 2mm;
             }
 
             .time {
-              text-align: center;
-              font-size: 6px;
+              text-align: left;
+              font-size: 18px;
               margin-top: 1mm;
+              margin-left:15px;
             }
 
             h1 {
-              font-size: 8px;
-              text-align: center;
+              font-size:24 px;
+              text-align: left;
+              margin-left:15px;
             }
 .merci {
        
-              text-align: center;
+              text-align: left;
             }
               
 
@@ -243,26 +245,46 @@ function App(props) {
 
             .header {
               display: flex;
-              justify-content: space-between;
+              gap:160px;
               margin-top: 2mm;
               margin-left: 2mm;
               margin-right: 2mm;
             }
 
             .time {
-              text-align: center;
-              font-size: 6px;
+              text-align: left;
+              font-size: 12px;
+              letter-spacing:4px;
               margin-top: 1mm;
             }
 
             h1 {
-              font-size: 8px;
-              text-align: center;
+              font-size: 24px;
+              text-align: left;
             }
 .merci {
        
-              text-align: center;
+              text-align: left;
+               margin-left:15px;
             }
+               body{
+                  width:250px;
+            }
+                  .pricePrint2{
+                  font-size:20px;
+            }
+                       .itemPrint{
+                  
+            }
+                              .details p {
+              display:flex;
+              justify-content:space-between;
+              
+            }
+              .details p strong{
+              width:70%;
+            }
+
         </style>
       </head>
       <body>
@@ -274,28 +296,31 @@ function App(props) {
           <h1>Voiture Detail</h1>
           
           <div class="details">
-            <p><strong>Marque:</strong> ${props.idMarque.marque.nom}</p>
-            <p><strong>Model:</strong> ${props.model.model}</p>
-            <p><strong>Annee:</strong> ${props.selectedAnne}</p>
-            <p><strong>Carburant:</strong> ${props.anne.carburant}</p>
-            <p><strong>Transmission:</strong> ${props.anne.transmission}</p>
-            <p><strong>Puissance:</strong> ${props.anne.puissance}</p>
-            <p><strong>Cylindree:</strong> ${props.anne.cylindree}</p>
-            <p><strong>Confort Description:</strong> ${description}</p>
-            <p><strong>Confort Aides des Conduite:</strong> ${aidesConduite.join(", ")}</p>
-            <p><strong>Confort Multimedia:</strong> ${multimedia}</p>
-            <p><strong>Type de carrosserie:</strong> ${props.anne.carrosserie}</p>
-            <p><strong>Vitesse:</strong> ${props.anne.vitesse}</p>
-            <p><strong>Nombres de places:</strong> ${props.anne.places}</p>
-            <p><strong>Capacite du coffre:</strong> ${props.anne.coffre}</p>
-            <p><strong>Coleur exterieure:</strong> ${props.color}</p>
-            <p><strong>Autonomie maximale:</strong> ${props.anne.autonomie}</p>
-            <p><strong>Confort Prix:</strong> ${prix}</p>
-          </div>
-          
-          <div class='time'>
+           <div class='time'>
             <p>${time}</p>
           </div>
+          <hr/>
+            <p><strong>Marque:</strong><span class='itemPrint'>${props.idMarque.marque.nom}</span></p>
+            <p><strong>Model:</strong><span class='itemPrint'>${props.model.model}</span> </p>
+            <p><strong>Annee:</strong><span class='itemPrint'>${props.selectedAnne}</span></p>
+            <p><strong>Carburant:</strong><span class='itemPrint'>${props.anne.carburant}</span> </p>
+            <p><strong>Transmission:</strong><span class='itemPrint'>${props.anne.transmission}</span> </p>
+            <p><strong>Puissance:</strong><span class='itemPrint'>${props.anne.puissance}</span> </p>
+            <p><strong>Cylindree:</strong><span class='itemPrint'>${props.anne.cylindree}</span> </p>
+            <p><strong>Description:</strong><span class='itemPrint'>${description}</span> </p>
+            <p><strong>Aides des Conduite:</strong><span class='itemPrint'>${aidesConduite.join(", ")}</span> </p>
+            <p><strong>Multimedia:</strong><span class='itemPrint'>${multimedia}</span> </p>
+            <p><strong>Type de carrosserie:</strong><span class='itemPrint'>${props.anne.carrosserie}</span> </p>
+            <p><strong>Vitesse:</strong><span class='itemPrint'>${props.anne.vitesse}</span></p>
+            <p><strong>Nombres de places:</strong><span class='itemPrint'>${props.anne.places}</span> </p>
+            <p><strong>Capacite du coffre:</strong><span class='itemPrint'>${props.anne.coffre}</span></p>
+            <p><strong>Coleur exterieure:</strong><span class='itemPrint'>${props.color}</span> </p>
+            <p><strong>Autonomie maximale:</strong><span class='itemPrint'>${props.anne.autonomie}</span> </p>
+            <hr/>
+            <p class='pricePrint2'><strong >Prix:</strong><span class='itemPrint'>${prix}</span> </p>
+          </div>
+          
+         
           <div class='merci'>
           <h3>Merci Pour Votre Visite</h3>
           </div>
