@@ -1,0 +1,41 @@
+.cars-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10px;
+    gap: 10px;
+    position: relative;
+}
+.cars-container .to-top-button{
+    position: fixed;
+    top: 90%;
+    right: 5px;
+}
+
+.cars-container .to-top-button .upTopButton{
+    font-size: 1.5rem;
+    border: 1px solid black;
+    border-radius: 50px;
+    background:#ffff;
+    color: black;
+    cursor: pointer;
+    padding: 5px;
+    transition: 0.5s;
+}
+
+.cars-container .to-top-button button:hover{
+    background: linear-gradient(to bottom, rgba(76,154,246,1) 0%, rgba(22,87,223,1) 98%);
+    color: white;
+    transition: 0.5s;
+}
+
+.cars-container .to-top-button button:active{
+    background: linear-gradient(to bottom, rgba(76,154,246,1) 0%, rgba(22,87,223,1) 98%);
+    color: white;
+    transition: 0.5s;
+}
+
+.cars-container p.error{
+    text-align: center;
+    font-size: larger;
+    margin-left: px;
+}

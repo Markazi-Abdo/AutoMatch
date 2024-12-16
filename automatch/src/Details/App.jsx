@@ -180,7 +180,7 @@ function App(props) {
         <style>
           @media print {
             @page {
-              size: 30mm 57mm;
+              size: 35mm 57mm;
               margin: 0;
               pading:5px;
             }
@@ -193,7 +193,7 @@ function App(props) {
               margin: 0;
               box-sizing: border-box;
               overflow: hidden; 
-              transform: scale(1); 
+              transform: scale(7.1); 
               transform-origin: top left;
             }
 

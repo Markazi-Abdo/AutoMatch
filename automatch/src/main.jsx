@@ -7,11 +7,10 @@ import { Provider } from "react-redux";
 import Reduce from './Reduce/Reducer';
 const store = createStore(Reduce);
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  
     <BrowserRouter>
     <Provider store={store}>
     <RoutingManagement />
     </Provider>
     </BrowserRouter>
-  </StrictMode>,
 )
