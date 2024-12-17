@@ -20,6 +20,7 @@ overflow: auto;
     right: 0px;
     
 }
+
 .main{
     position: relative;
     width: 700px;
@@ -27,6 +28,7 @@ overflow: auto;
     display: flex;
     flex-wrap: wrap;
 }
+
 aside{
     position: relative;
     width: 350px;

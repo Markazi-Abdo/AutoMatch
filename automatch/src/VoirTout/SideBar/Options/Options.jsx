@@ -11,13 +11,7 @@ export default function Options(){
     return(
         <div className="options-container">
             <Performance/>
-            <DimensionEspace/>
-            <Autonomie/>
-            <Personnalisation/>
-            <Technolgie/>
-            <Confort/>
-            <Aides/>
-            <Securite />
+            <DimensionEspace/>            
         </div>
     )
 }
