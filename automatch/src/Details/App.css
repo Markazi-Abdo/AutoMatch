@@ -8,7 +8,7 @@
 }
 .App{
     box-sizing: border-box;
-    background: #e2e7e7;
+    background: #c6c9c9;
     padding: 30px;
     height: 100%;
 
@@ -23,7 +23,7 @@
 p{
     padding: 0;
     margin-left: 10px;
-    line-height: 0.6;
+    line-height: 0.8;
     
 }
 hr{

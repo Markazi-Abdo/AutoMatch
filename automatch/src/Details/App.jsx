@@ -206,13 +206,7 @@ function App(props) {
 
             }
 
-            .header {
-              display: flex;
-              gap:20px;
-              margin-top: 2mm;
-              margin-left: 2mm;
-              margin-right: 2mm;
-            }
+
 
             .time {
               text-align: left;
@@ -245,10 +239,10 @@ function App(props) {
 
             .header {
               display: flex;
-              gap:160px;
+              gap:50px;
+              justify-content:center;
+              width:100%;
               margin-top: 2mm;
-              margin-left: 2mm;
-              margin-right: 2mm;
             }
 
             .time {
@@ -256,13 +250,19 @@ function App(props) {
               font-size: 12px;
               letter-spacing:4px;
               margin-top: 1mm;
-              margin-left:14px;
+              margin-left:20px;
             }
 
             h1 {
               font-size: 24px;
-              text-align: left;
-              margin-left:25px;
+              text-align: center;
+
+            }
+            td{
+            text-align:left;
+            }
+            th{
+            text-align:left;
             }
 .merci {
        
@@ -273,10 +273,10 @@ function App(props) {
                   width:250px;
             }
                   .pricePrint2{
-                  font-size:20px;
+                  
             }
                        .itemPrint{
-                  
+                  font-size:18px;
             }
                               .details p {
               display:flex;
@@ -287,13 +287,14 @@ function App(props) {
               width:70%;
             }
 
+
         </style>
       </head>
       <body>
         <div class="printable">
           <div class='header'>
-            <img src="${cmcLogo}" alt="Logo" width='25px' height='25px' />
-            <img src="${props.idMarque.marque.logo}" alt="Logo" width='25px' />
+            <img src="/Black & White 1@4x.png" alt="Logo" width='50px' height='50px' />
+            <img src="${props.idMarque.marque.logo}" alt="Logo" width='50px' />
           </div>
           <h1>Voiture Detail</h1>
           
@@ -301,25 +302,81 @@ function App(props) {
            <div class='time'>
             <p>${time}</p>
           </div>
-          <hr/>
-            <p><strong>Marque:</strong><span class='itemPrint'>${props.idMarque.marque.nom}</span></p>
-            <p><strong>Model:</strong><span class='itemPrint'>${props.model.model}</span> </p>
-            <p><strong>Annee:</strong><span class='itemPrint'>${props.selectedAnne}</span></p>
-            <p><strong>Carburant:</strong><span class='itemPrint'>${props.anne.carburant}</span> </p>
-            <p><strong>Transmission:</strong><span class='itemPrint'>${props.anne.transmission}</span> </p>
-            <p><strong>Puissance:</strong><span class='itemPrint'>${props.anne.puissance}</span> </p>
-            <p><strong>Cylindree:</strong><span class='itemPrint'>${props.anne.cylindree}</span> </p>
-            <p><strong>Description:</strong><span class=''>${description}</span> </p>
-            <p><strong>Aides des Conduite:</strong><span class=''>${aidesConduite.join(", ")}</span> </p>
-            <p><strong>Multimedia:</strong><span class=''>${multimedia}</span> </p>
-            <p><strong>Type de carrosserie:</strong><span class='itemPrint'>${props.anne.carrosserie}</span> </p>
-            <p><strong>Vitesse:</strong><span class='itemPrint'>${props.anne.vitesse}</span></p>
-            <p><strong>Nombres de places:</strong><span class='itemPrint'>${props.anne.places}</span> </p>
-            <p><strong>Capacite du coffre:</strong><span class='itemPrint'>${props.anne.coffre}</span></p>
-            <p><strong>Coleur exterieure:</strong><span class='itemPrint'>${props.color}</span> </p>
-            <p><strong>Autonomie maximale:</strong><span class='itemPrint'>${props.anne.autonomie}</span> </p>
-            <hr/>
-            <p class='pricePrint2'><strong >Prix:</strong><span class='itemPrint'>${prix} DH</span> </p>
+          <span>-------------------------------------------</span>
+            <table>
+        <tr>
+            <th>Marque:</th>
+            <td>${props.idMarque.marque.nom}</span></td>
+        </tr>
+        <tr>
+            <th>Model:</th>
+            <td>${props.selectedAnne}</td>
+        </tr>
+        <tr>
+            <th>Annee:</th>
+            <td>${props.selectedAnne}</td>
+        </tr>
+        <tr>
+            <th>Carburant:</th>
+            <td>${props.anne.carburant}</td>
+        </tr>
+        <tr>
+            <th>Transmission:</th>
+            <td>${props.anne.transmission}</td>
+        </tr>
+        <tr>
+            <th>Puissance:</th>
+            <td>${props.anne.puissance}</td>
+        </tr>
+        <tr>
+            <th>Cylindree:</th>
+            <td>${props.anne.cylindree}</td>
+        </tr>
+        <tr>
+            <th>Description:</th>
+            <td>${description}</td>
+        </tr>
+        <tr>
+            <th>Aides des Conduite:</th>
+            <td>${aidesConduite.join(", ")}</td>
+        </tr>
+        <tr>
+            <th>Multimedia:</th>
+            <td>${multimedia}</td>
+        </tr>
+        <tr>
+            <th>Type de carrosserie:</th>
+            <td>${props.anne.carrosserie}</td>
+        </tr>
+        <tr>
+            <th>Vitesse:</th>
+            <td>${props.anne.vitesse}</td>
+        </tr>
+        <tr>
+            <th>Nombres de places:</th>
+            <td>${props.anne.places}</td>
+        </tr>
+        <tr>
+            <th>Capacite du coffre:</th>
+            <td>${props.anne.coffre}</td>
+        </tr>
+        <tr>
+            <th>Coleur exterieure:</th>
+            <td>${props.color}</td>
+        </tr>
+        <tr>
+            <th>Autonomie maximale:</th>
+            <td>${props.anne.autonomie}</td>
+        </tr>
+        <tr>
+
+            <td colspan="2">-------------------------------------------</td>
+        </tr>
+        <tr class='pricePrint2'>
+            <th>Prix:</th>
+            <td>${prix} DH</td>
+        </tr>
+    </table>
           </div>
           
          

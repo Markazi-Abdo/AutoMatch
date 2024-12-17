@@ -38,13 +38,13 @@ const stateInitial = {
                                 description: "Sièges en cuir, GPS, caméra 360°",
                                 aidesConduite: ["Aide au stationnement", "Régulateur adaptatif"],
                                 multimedia: "Écran tactile avancé",
-                                prix: "30,000€"
+                                prix: "30,000"
                             },
                             luxe: {
                                 description: "Sièges massants premium, toit panoramique, intérieur cuir Nappa",
                                 aidesConduite: ["Pilotage semi-automatique", "Détection des piétons"],
                                 multimedia: "Système audio JBL, écran 12 pouces",
-                                prix: "35,000€"
+                                prix: "35,000"
                             }
                         }
                     },
