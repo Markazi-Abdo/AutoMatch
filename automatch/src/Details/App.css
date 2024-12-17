@@ -8,9 +8,10 @@
 }
 .App{
     box-sizing: border-box;
-    background: #b6b7b7;
-    padding: 20px;
-    
+    background: #e2e7e7;
+    padding: 30px;
+    height: 100%;
+
 }
 .navbar.f{
     margin: 40px 120px;

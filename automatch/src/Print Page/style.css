@@ -13,6 +13,7 @@
     font-family: Arial, sans-serif;
     background-color: var(--grayColor);
     overflow: hidden;
+    height: 100%;
   }
   
   .car-details-page {
