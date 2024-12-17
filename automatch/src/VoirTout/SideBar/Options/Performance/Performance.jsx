@@ -16,9 +16,9 @@ export default function Performance() {
         dispatch({ type: 'PUISSANCE', payload: { puissance: range } });
     };
 
-    //const handleCylindreFilter = (range) => {
-    //    dispatch({ type: 'CYLINDRE', payload: { cylindre: range } });
-    //};
+    const handleCylindreFilter = (range) => {
+        dispatch({ type: 'CYLINDRE', payload: { cylindre: range } });
+    };
 
     return (
         <div className="accordion-performance">
@@ -35,17 +35,16 @@ export default function Performance() {
                         <button onClick={() => handlePuissanceFilter("50-100")}>50 - 100</button>
                         <button onClick={() => handlePuissanceFilter("100-200")}>100 - 200</button>
                         <button onClick={() => handlePuissanceFilter("200-300")}>200 - 300</button>
-                    </div> 
-                    
+                    </div>
                     {/* 
-                        Partie de cylindrée
-                        <h5>Cylindrée</h5>
-                        <div className="cylindree">
-                            <button onClick={() => handleCylindreFilter("1000-1500")}>1000 - 1500</button>
-                            <button onClick={() => handleCylindreFilter("1500-2000")}>1500 - 2000</button>
-                            <button onClick={() => handleCylindreFilter("2000-3000")}>2000 - 3000</button>
-                        </div>
                     */}
+                    <h5>Cylindrée</h5>
+                    <div className="cylindree">
+                        <button onClick={() => handleCylindreFilter("100-200")}>100-200</button>
+                        <button onClick={() => handleCylindreFilter("200-300")}>200-300</button>
+                        <button onClick={() => handleCylindreFilter("300-400")}>300-400</button>
+                        <button onClick={() => handleCylindreFilter("400-500")}>400-500</button>
+                    </div>
                 </div>
             )}
         </div>
