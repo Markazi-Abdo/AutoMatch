@@ -5,7 +5,6 @@ import CarDetails from "./Print Page/all"
 //import AppAutoMatch from "./AppAutoMatch"
 import AppVoirTout from "./VoirTout/AppVoirTout"
 import ModelApp from "./Model Page/ModelApp"
-import CarDetailsv from "./PrintVoirTout/CarDetailsv"
 export default function RoutingManagement({cars, inputCherche, marqueSelectCherche, modelSelectCherche}) {
   return (
     <Routes>
@@ -22,7 +21,7 @@ export default function RoutingManagement({cars, inputCherche, marqueSelectCherc
 
             {/* !!!!!------ Choisir Model ------ !!!!!*/}
             <Route path = '/modele/:id' element = {<ModelApp/>} />
-
+            <Route path = '/rechercher-impression/:id/:model/:anne' element = {<CarDetails/>} />
 
         {/* ------ Voir Tous ------ */}
             <Route path = '/voirTous-page' element = {<AppVoirTout />} />

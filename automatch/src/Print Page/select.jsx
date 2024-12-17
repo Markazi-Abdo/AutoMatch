@@ -92,7 +92,7 @@ export default function Select(){
     
                                             {/* Pricing section */}
                                             <div className={style.price}>
-                                                <span className={style.amount}>{optionValues.prix} €</span>
+                                                <span className={style.amount}>{optionValues.prix} DH</span>
                                             </div>
                                         </div>
                                     </li>

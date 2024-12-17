@@ -18,6 +18,7 @@ body{
 
 
 /* Contenu Styles */
+
 @font-face{
     font-family: 'Bitsumishi';
     font-style: normal;
@@ -77,6 +78,26 @@ h6{
     margin-top: 5px;
 }
 
+
+@media screen and (min-height: 800px) {
+    .home img{
+        position: absolute;
+        bottom: 130px;
+        width: 650px;
+    }
+    .contenu h1{
+        font-size: 220px;
+        line-height: 150px;
+         font-family: 'Bitsumishi';
+         color: var(--blueColor);
+         margin-top: 70px;
+     }
+}
+
+.contenu{
+    text-align: left;
+    margin-top: 5px;
+}
 /* Footer Styles */
 
 .footer{
@@ -130,6 +151,7 @@ h6{
     width: 40px;
     height: 40px;
     margin-top: 10px;
+    
 }
 
 .footerButton{

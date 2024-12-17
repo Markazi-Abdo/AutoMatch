@@ -75,7 +75,7 @@ export default function Model({id, data, marqueImg }) {
                     <div className={styles.body}>
                         <h5>{model}</h5> {/* Display model name */}
                         <h6>{year}</h6> {/* Display the year */}
-                        <p>Price: {details.price} €</p> {/* Display the price */}
+                        <p>Price: {details.price} DH</p> {/* Display the price */}
 
                         {/* Dynamic colors */}
                         <div className={styles.color}>

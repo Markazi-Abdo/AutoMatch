@@ -31,7 +31,7 @@ function CarDetails({ cars }) {
         <div className="col-12">
           {/* <Car anne={selectedAnne} data={selectedAnne} img={selectedAnne} /> */}
           <div className=" row">
-        <img src="/bg-3.jpg" alt="back-img" id="carImage2" className="first-img-filter col-6"/>
+        <img src="/bg.jpg" alt="back-img" id="carImage2" className="first-img-filter col-6"/>
     
 
     <img id="carImage"  className="col-12 car-image" src={selectedImg || Object.values(selectedAnne.colors)[0].image} alt="Voiture"/>

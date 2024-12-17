@@ -5,11 +5,11 @@ export default function FooterHome() {
         <div className={Style.footer}>
             <div className={Style.centerFooter}>
                 <div className={Style.contentText}>
-                    <div className="d-flex ${Style.footerSteps}">
+                    <div className={`d-flex ${Style.footerSteps}`}>
                         <p className="m-0">CHOISIR<br />LA MARQUE</p>
                         <img src="./angle-de-la-fleche-droite (1).png" width='40px' alt="Flèche" />
                     </div>
-                    <div className="d-flex ${Style.footerSteps}">
+                    <div className={`d-flex ${Style.footerSteps}`}>
                         <p className="m-0">CHOISIR<br />LE MODÈLE</p>
                         <img src="./angle-de-la-fleche-droite (1).png" alt="Flèche" width='40px' />
                     </div>

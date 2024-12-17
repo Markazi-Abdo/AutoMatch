@@ -13,7 +13,7 @@ export default function Autonomie(){
     return(
         <div className="accordion-autonomie">
             <div className="title">
-                <h3>Autonomie et recharge</h3>
+                <h3>Autonomie</h3>
                 <i>{!isOpen ? <FontAwesomeIcon icon={faPlus} onClick={setDisplay}/> : <FontAwesomeIcon icon={faMinus} onClick={setDisplay}/>}</i>
             </div>
             {

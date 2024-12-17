@@ -58,7 +58,7 @@ const stateInitial = {
                             autonomie: "900 km",
                             vitesse: "200 km/h",
                             places: 5,
-                            price: "27,000€",
+                            price: "27,000",
                             keyWords: ["famille", "confort", "aventure", "éco"],
                             colors: {
                                 blanc: { code: "#FFFFFF", image: "/CARS Pictures/toyota/corolla/2023/blanc.png" },
@@ -148,8 +148,7 @@ const stateInitial = {
                                 gris: { code: "#808080", image: "/CARS Pictures/toyota/RAV4/2023/gris.png" },
                                 bleu: { code: "#0000FF", image: "/CARS Pictures/toyota/RAV4/2023/bleu.png" },
                                 rouge: { code: "#FF0000", image: "/CARS Pictures/toyota/RAV4/2023/rouge.png" },
-                                blanc: { code: "#FFFFFF", image: "/CARS Pictures/toyota/RAV4/2023/blanc.png" },
-                                noir: { code: "#000000", image: "/CARS Pictures/toyota/RAV4/2023/rouge.png" }
+                                blanc: { code: "#FFFFFF", image: "/CARS Pictures/toyota/RAV4/2023/blanc.png" }
                             },
                             optionsConfort: {
                                 standard: {
@@ -418,8 +417,8 @@ const stateInitial = {
                                 rouge: { code: "#FF0000", image: "/CARS Pictures/ford/ranger/2024/rouge.png" },
                                 bleu: { code: "#0000FF", image: "/CARS Pictures/ford/ranger/2024/bleu.png" },
                                 gris: { code: "#808080", image: "/CARS Pictures/ford/ranger/2024/gris.png" },
-                                blanc: { code: "#FFFFFF", image: "/CARS Pictures/ford/ranger/2024/noir.png" },
-                                noir: { code: "#000000", image: "/CARS Pictures/ford/ranger/2024/blanc.png" }
+                                blanc: { code: "#FFFFFF", image: "/CARS Pictures/ford/ranger/2024/blanc.png" },
+                                noir: { code: "#000000", image: "/CARS Pictures/ford/ranger/2024/noir.png" }
                             },
                             optionsConfort: {
                                 standard: {
@@ -1107,7 +1106,7 @@ const stateInitial = {
                             price: "45,000",
                             keyWords: ["électrique", "innovant", "technologique"],
                             colors: {
-                                noir: { code: "#FFFFFF", image: "/CARS Pictures/tesla/model 3/2022/blanc.png" }
+                                blanc: { code: "#FFFFFF", image: "/CARS Pictures/tesla/model 3/2022/blanc.png" }
                             },
                             optionsConfort: {
                                 standard: {
@@ -1326,7 +1325,7 @@ const stateInitial = {
                             price: "48,000",
                             keyWords: ["confort", "économique", "performante"],
                             colors: {
-                                bleu: { code: "#FFFFFF", image: "/CARS Pictures/mercedes/c-class/2022/blanc.png" }
+                                blanc: { code: "#FFFFFF", image: "/CARS Pictures/mercedes/c-class/2022/blanc.png" }
                             },
                             optionsConfort: {
                                 standard: {

@@ -12,12 +12,12 @@ export default function Options(){
         <div className="options-container">
             <Performance/>
             <DimensionEspace/>
+            <Autonomie/>
             <Personnalisation/>
             <Technolgie/>
             <Confort/>
             <Aides/>
             <Securite />
-            <Autonomie/>
         </div>
     )
 }

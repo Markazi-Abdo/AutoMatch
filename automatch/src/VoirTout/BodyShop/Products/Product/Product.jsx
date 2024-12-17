@@ -1,6 +1,6 @@
 import './Product.css'
 import { useNavigate } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
 export default function Product({ id, marque, annee, details, model }) {
   const firstColorKey = Object.keys(details.colors)[0];
   const firstColorSrc = details.colors[firstColorKey].image;
@@ -18,7 +18,7 @@ export default function Product({ id, marque, annee, details, model }) {
           const isWhite = colorData.code === "#FFFFFF";
           return (
             
-              <button className="colorButtons" key={colorName} style={{background:colorData.code, border: isWhite ? "1px solid #000" : "none",}}></button>
+             <button className="colorButtons" key={colorName} style={{background:colorData.code, border: isWhite ? "1px solid #000" : "none",}}></button>
             
           );
         })}
@@ -29,8 +29,8 @@ export default function Product({ id, marque, annee, details, model }) {
       </div>
       <div className="body">
         <h3>{marque.nom}</h3>
-        <h2>{details.price }</h2>
-        <button onClick={handleClickDetails}>Plus de details</button>
+        <h2>{details.price } DH</h2>
+        <Link to={`/voirTous-impression/${id}/${model.model}/${annee}`}> <button onClick={handleClickDetails}>Plus de details</button></Link>
       </div>
     </div>
   );

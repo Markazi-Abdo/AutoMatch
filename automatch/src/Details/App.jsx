@@ -256,11 +256,13 @@ function App(props) {
               font-size: 12px;
               letter-spacing:4px;
               margin-top: 1mm;
+              margin-left:14px;
             }
 
             h1 {
               font-size: 24px;
               text-align: left;
+              margin-left:25px;
             }
 .merci {
        
@@ -307,9 +309,9 @@ function App(props) {
             <p><strong>Transmission:</strong><span class='itemPrint'>${props.anne.transmission}</span> </p>
             <p><strong>Puissance:</strong><span class='itemPrint'>${props.anne.puissance}</span> </p>
             <p><strong>Cylindree:</strong><span class='itemPrint'>${props.anne.cylindree}</span> </p>
-            <p><strong>Description:</strong><span class='itemPrint'>${description}</span> </p>
-            <p><strong>Aides des Conduite:</strong><span class='itemPrint'>${aidesConduite.join(", ")}</span> </p>
-            <p><strong>Multimedia:</strong><span class='itemPrint'>${multimedia}</span> </p>
+            <p><strong>Description:</strong><span class=''>${description}</span> </p>
+            <p><strong>Aides des Conduite:</strong><span class=''>${aidesConduite.join(", ")}</span> </p>
+            <p><strong>Multimedia:</strong><span class=''>${multimedia}</span> </p>
             <p><strong>Type de carrosserie:</strong><span class='itemPrint'>${props.anne.carrosserie}</span> </p>
             <p><strong>Vitesse:</strong><span class='itemPrint'>${props.anne.vitesse}</span></p>
             <p><strong>Nombres de places:</strong><span class='itemPrint'>${props.anne.places}</span> </p>
@@ -317,7 +319,7 @@ function App(props) {
             <p><strong>Coleur exterieure:</strong><span class='itemPrint'>${props.color}</span> </p>
             <p><strong>Autonomie maximale:</strong><span class='itemPrint'>${props.anne.autonomie}</span> </p>
             <hr/>
-            <p class='pricePrint2'><strong >Prix:</strong><span class='itemPrint'>${prix}</span> </p>
+            <p class='pricePrint2'><strong >Prix:</strong><span class='itemPrint'>${prix} DH</span> </p>
           </div>
           
          
@@ -366,7 +368,7 @@ console.log(time)
         <p>Confort Multimedia: {multimedia}</p>
         <br />
         <hr />
-        <p style={{fontWeight:'bold'}}><strong>Prix:</strong> <span style={{color:'#ff8e2b'}}>{prix} €</span></p>
+        <p style={{fontWeight:'bold',fontSize:'20px'}}><strong>Prix:</strong> <span style={{color:'#ff8e2b'}}>{prix} DH</span></p>
       </div>
       <div className={BtnStyle.btnGrpPrint}>
         {/* <button className={BtnStyle.buttonPrint}>Imprimer PDF (A4)</button> */}
