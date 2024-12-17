@@ -1604,7 +1604,7 @@ export default function Reduce(data =stateInitial, action) {
                 )
             };
 
-        case 'FILTER_PLACE':
+        case 'PLACE':
             return {
                 ...data,
                 selectedPlace: action.payload.place,
@@ -1634,6 +1634,7 @@ export default function Reduce(data =stateInitial, action) {
                 selectedPlaces: "",
                 filteredCars: data.cars, 
             };
+
         case SET_SELECTED_OPTION:
             return {
                 ...data,

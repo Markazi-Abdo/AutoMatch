@@ -14,7 +14,7 @@ export default function DimensionEspace() {
 
   const selectPlace = (places) => {
     dispatch({
-      type: 'FILTER_PLACE',
+      type: 'PLACE',
       payload: {
         place: places, // Dispatch the selected seat capacity
       },
