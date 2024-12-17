@@ -11,7 +11,7 @@ export default function Options(){
     return(
         <div className="options-container">
             <Performance/>
-            <DimensionEspace/>            
+            <DimensionEspace/>
         </div>
     )
 }

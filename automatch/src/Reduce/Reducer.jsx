@@ -1706,13 +1706,12 @@ function filtering(cars, searchText, selectedMarque, selectedModel, minPrice, ma
             
             const matchPuissance = selectedPuissance ? parseInt(modelAnnee.puissance) >= parseInt(selectedPuissance.split("-")[0]) && parseInt(modelAnnee.puissance) <= parseInt(selectedPuissance.split("-")[1]) : true;
 
-            //Logic de Cylindrée
-            //const matchCylindre = selectedCylindre
-            //? parseInt(modelAnnee.cylindree) >= parseInt(selectedCylindre.split("-")[0])
-            //&& parseInt(modelAnnee.cylindree) <= parseInt(selectedCylindre.split("-")[1])
-            //: true;
+            const matchCylindre = selectedCylindre
+            ? parseInt(modelAnnee.cylindree) >= parseInt(selectedCylindre.split("-")[0])
+            && parseInt(modelAnnee.cylindree) <= parseInt(selectedCylindre.split("-")[1])
+            : true;
 
-            return matchCarburant && matchTransmission && matchPrice && matchKeyword && matchPlace && matchPuissance;
+            return matchCarburant && matchTransmission && matchPrice && matchKeyword && matchPlace && matchPuissance && matchCylindre;
         });
     });
 });
