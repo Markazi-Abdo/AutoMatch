@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
 export default function DimensionEspace() {
-  const [isOpen, setIsOpen] = useState(false); // Toggle accordion state
+  const [isOpen, setIsOpen] = useState(true); // Toggle accordion state
   const dispatch = useDispatch(); // Redux dispatch
 
   const toggleDisplay = () => {

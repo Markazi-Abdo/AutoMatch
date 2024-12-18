@@ -14,8 +14,6 @@
 
 .accordion-performance .title i{
     cursor: pointer;
-    border: 2px solid;
-    border-radius: 50px;
     padding: 1.5px;
 }
 

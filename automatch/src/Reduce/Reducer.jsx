@@ -1529,9 +1529,9 @@ const stateInitial = {
         ]
     }
 ],
-searchText:"",
-selectedMarque:"",
-selectedModel:"",
+searchText: null,
+selectedMarque: null,
+selectedModel: null,
 selectMinPrice: 10000,
 selectMaxPrice: 60000,
 selectedCarburant: null, 
@@ -1660,9 +1660,9 @@ export default function Reduce(data =stateInitial, action) {
         case 'RESET':
             return {
                 ...data,
-                searchText: "", 
-                selectedMarque: "", 
-                selectedModel: "", 
+                searchText: null, 
+                selectedMarque: null, 
+                selectedModel: null, 
                 selectMinPrice: 10000, 
                 selectMaxPrice: 60000, 
                 selectedCarburant: null, 
@@ -1704,7 +1704,10 @@ function filtering(cars, searchText, selectedMarque, selectedModel, minPrice, ma
 
             const matchPlace =selectedPlace === ">4" ? modelAnnee.places > 4: selectedPlace ? modelAnnee.places === selectedPlace: true;
             
-            const matchPuissance = selectedPuissance ? parseInt(modelAnnee.puissance) >= parseInt(selectedPuissance.split("-")[0]) && parseInt(modelAnnee.puissance) <= parseInt(selectedPuissance.split("-")[1]) : true;
+            const matchPuissance = selectedPuissance 
+            ? parseInt(modelAnnee.puissance) >= parseInt(selectedPuissance.split("-")[0]) 
+            && parseInt(modelAnnee.puissance) <= parseInt(selectedPuissance.split("-")[1]) 
+            : true;
 
             const matchCylindre = selectedCylindre
             ? parseInt(modelAnnee.cylindree) >= parseInt(selectedCylindre.split("-")[0])

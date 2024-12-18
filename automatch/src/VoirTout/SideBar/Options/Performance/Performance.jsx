@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
 export default function Performance() {
-    const [isOpen, setIsOpen] = useState(null);
+    const [isOpen, setIsOpen] = useState(true);
     const dispatch = useDispatch();
 
     const setDisplay = () => {
