@@ -39,7 +39,7 @@ export default function DimensionEspace() {
           <div className="places">
             <button onClick={() => selectPlace(2)} className='place'>2 places</button>
             <button onClick={() => selectPlace(4)} className='place'>4 places</button>
-            <button onClick={() => selectPlace(">4")} className='place'>&gt; 4places</button>
+            <button onClick={() => selectPlace(">4")} className='place'>&gt;4 places</button>
           </div>
         </div>
       )}

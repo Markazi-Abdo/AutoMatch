@@ -4,11 +4,11 @@ import "./Style.css";
 
 const Price = () => {
   const dispatch = useDispatch();
-  const [leftValue, setLeftValue] = useState("10000");
-  const [rightValue, setRightValue] = useState("60000");
+  const [leftValue, setLeftValue] = useState(10000);
+  const [rightValue, setRightValue] = useState(60000);
 
-  const min = "10000";
-  const max = "60000";
+  const min = 10000;
+  const max = 60000;
 
   const updateLeftValue = (value) => {
     const newValue = Math.min(value, rightValue);

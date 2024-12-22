@@ -8,9 +8,10 @@
 }
 .App{
     box-sizing: border-box;
-    background: #c6c9c9;
+    background: hsl(0, 0%, 97%);
     padding: 30px;
     height: 100%;
+   
 
 }
 .navbar.f{
@@ -57,4 +58,8 @@ hr{
       line-height: 1.2em;
     }
   }
-  
+  @media screen and (min-height: 800px) {
+    .App{
+      height: 900px;
+  }
+}

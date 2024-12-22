@@ -1,35 +1,23 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-   
-}
-
-body{
-overflow: auto;
-}
-
-.voirTout{
-    position: relative;
+.voirTout {
     display: flex;
-    
-}
-
-.bodyShop{
-    top: 2px;
-    right: 0px;
-    
-}
-
-.main{
-    position: relative;
-    width: 700px;
-    right: 0;
+  }
+  
+  aside {
+    flex: 0 0 250px; 
+  }
+  
+  main {
+    flex: 1; 
     display: flex;
-    flex-wrap: wrap;
-}
-
-aside{
-    position: relative;
-    width: 350px;
-}
+    flex-direction: column;
+  }
+  
+  .bodyShop { 
+    min-height: 85px; 
+  }
+  
+  .products {
+    flex: 1;
+    margin-top: 20px;
+  }
+  

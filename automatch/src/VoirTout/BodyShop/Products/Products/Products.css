@@ -2,6 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-left: 10px;
+    margin-top: 25px;
     gap: 10px;
     position: relative;
 }
@@ -10,6 +11,17 @@
     top: 90%;
     right: 5px;
 }
+
+.cars-container .total-cars{
+    position: absolute;
+    top: -50px;
+    left: 980px;
+}
+.cars-container .total-cars h2{
+    font-size: 25px;
+    color: #b6b7b7ac;
+}
+
 
 .cars-container .to-top-button .upTopButton{
     font-size: 1.5rem;
@@ -23,7 +35,7 @@
 }
 
 .cars-container .to-top-button button:hover{
-    background: linear-gradient(to bottom, rgba(76,154,246,1) 0%, rgba(22,87,223,1) 98%);
+    background: linear-gradient(to bottom, rgba(76,154,246,1) 0%, rgb(22, 87, 223) 98%);
     color: white;
     transition: 0.5s;
 }
@@ -34,8 +46,23 @@
     transition: 0.5s;
 }
 
-.cars-container p.error{
+.cars-container span.error{
     text-align: center;
-    font-size: larger;
-    margin-left: px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    position: absolute;
+    left: 450px;
+    top: 100px;
+}
+
+.cars-container span.reset{
+    text-align: center;
+    font-size: 1rem;
+    text-decoration: underline;
+    text-transform: uppercase;
+    position: absolute;
+    color: rgb(22, 87, 223);
+    cursor: pointer;
+    left: 529px;
+    top: 150px;
 }

@@ -5,6 +5,8 @@
     padding: 9px;
     height: 45px;
     width: 400px;
+    margin-left: 20px;
+    margin-top: 10px;
     transition: 0.5s;
 }
 

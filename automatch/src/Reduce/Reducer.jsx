@@ -1196,8 +1196,7 @@ const stateInitial = {
                             noir: { code: "#000000", image: "/CARS Pictures/bmw/Serie 3/2021/noir.png" },
                             gris: { code: "#808080", image: "/CARS Pictures/bmw/Serie 3/2021/gris.png" },
                             blanc: { code: "#FFFFFF", image: "/CARS Pictures/bmw/Serie 3/2021/blanc.png" },
-                            bleu: { code: "blue", image: "/CARS Pictures/bmw/Serie 3/2021/bleu.png" },
-                            orange: { code: "orange", image: "/CARS Pictures/bmw/Serie 3/2021/orange.png" },
+                            bleu: { code: "blue", image: "/CARS Pictures/bmw/Serie 3/2021/orange.png" },
                             rouge: { code: "red", image: "/CARS Pictures/bmw/Serie 3/2021/rouge.png" }
                         },
                         optionsConfort: {
@@ -1543,19 +1542,61 @@ filteredCars:[],
 selectedOption: null, 
 };
 
-export default function Reduce(data =stateInitial, action) {
+export default function Reduce(data = stateInitial, action){
     switch(action.type){
         case 'INPUT':
-            return {...data, searchText:action.payload.input,
-                    filteredCars:filtering(data.cars, action.payload.input, data.selectedMarque, data.selectedModel)}
+            return {
+                ...data, searchText:action.payload.input,
+                filteredCars:filtering(
+                    data.cars, 
+                    action.payload.input, 
+                    data.selectedMarque, 
+                    data.selectedModel,
+                    data.selectMinPrice, 
+                    data.selectMaxPrice,
+                    data.selectedCarburant,
+                    data.selectedTransmission,
+                    data.selectedPlaces,
+                    data.selectedPuissance,
+                    data.selectedCylindre
+                )
+            }
 
         case 'MARQUE':
-            return {...data, selectedMarque:action.payload.marqueSelectValue,
-                    filteredCars:filtering(data.cars, data.searchText, action.payload.marqueSelectValue, data.selectedModel)}
+            return {
+                ...data, selectedMarque:action.payload.marqueSelectValue,
+                filteredCars:filtering(
+                    data.cars, 
+                    data.searchText, 
+                    action.payload.marqueSelectValue, 
+                    data.selectedModel,
+                    data.selectMinPrice, 
+                    data.selectMaxPrice,
+                    data.selectedCarburant,
+                    data.selectedTransmission,
+                    data.selectedPlaces,
+                    data.selectedPuissance,
+                    data.selectedCylindre
+                )
+            }
         
         case 'MODEL':
-            return {...data, selectedModel:action.payload.modelSelectValue,
-                    filteredCars:filtering(data.cars, data.searchText, data.selectedMarque, action.payload.modelSelectValue)}
+            return {
+                ...data, selectedModel:action.payload.modelSelectValue,
+                filteredCars:filtering(
+                    data.cars, 
+                    data.searchText, 
+                    data.selectedMarque, 
+                    action.payload.modelSelectValue,
+                    data.selectMinPrice, 
+                    data.selectMaxPrice,
+                    data.selectedCarburant,
+                    data.selectedTransmission,
+                    data.selectedPlaces,
+                    data.selectedPuissance,
+                    data.selectedCylindre
+                )
+            }
 
         case 'MIN_MAX_PRICE':
             return {
@@ -1568,7 +1609,12 @@ export default function Reduce(data =stateInitial, action) {
                     data.selectedMarque,
                     data.selectedModel,
                     action.payload.minPrice,
-                    action.payload.maxPrice
+                    action.payload.maxPrice,
+                    data.selectedCarburant,
+                    data.selectedTransmission,
+                    data.selectedPlaces,
+                    data.selectedPuissance,
+                    data.selectedCylindre
                 )
             };
 
@@ -1585,6 +1631,10 @@ export default function Reduce(data =stateInitial, action) {
                     data.selectMinPrice, 
                     data.selectMaxPrice,
                     action.payload.carburant, 
+                    data.selectedTransmission,
+                    data.selectedPlaces,
+                    data.selectedTransmission,
+                    data.selectedCylindre,
                 )
             };
 
@@ -1601,6 +1651,9 @@ export default function Reduce(data =stateInitial, action) {
                     data.selectMaxPrice, 
                     data.selectedCarburant,
                     action.payload.transmission ,
+                    data.selectedPlaces,
+                    data.selectedPuissance,
+                    data.selectedCylindre,
                 )
             };
 
@@ -1617,7 +1670,9 @@ export default function Reduce(data =stateInitial, action) {
                     data.selectMaxPrice, 
                     data.selectedCarburant,
                     data.selectedTransmission,
-                    action.payload.place
+                    action.payload.place,
+                    data.selectedPuissance,
+                    data.selectedCylindre,
                 ),
             };    
         
@@ -1635,7 +1690,8 @@ export default function Reduce(data =stateInitial, action) {
                     data.selectedCarburant,
                     data.selectedTransmission,
                     data.selectedPlaces,
-                    action.payload.puissance
+                    action.payload.puissance,
+                    data.selectedCylindre
                 )
             };
 
@@ -1652,6 +1708,7 @@ export default function Reduce(data =stateInitial, action) {
                     data.selectMaxPrice, 
                     data.selectedCarburant,
                     data.selectedTransmission,
+                    data.selectedPlaces,
                     data.selectedPuissance,
                     action.payload.cylindre
                 )
@@ -1683,43 +1740,97 @@ export default function Reduce(data =stateInitial, action) {
 }}
 
 
-function filtering(cars, searchText, selectedMarque, selectedModel, minPrice, maxPrice, selectedCarburant, selectedTransmission, selectedPlace, selectedPuissance, selectedCylindre){
-    return cars.filter((car) => {
-        const matchMarque = selectedMarque ? car.marque.nom === selectedMarque : true;
-        
-        return matchMarque && car.models.some((model) => {
-        const matchModel = selectedModel ? model.model === selectedModel : true;
-        
-        return matchModel && Object.entries(model.detailsParAnnee).some(([annee, modelAnnee]) => {
-            const matchPrice = minPrice && maxPrice
-            ? parseFloat(modelAnnee.price.replace(/[,\s]/g, '')) >= parseFloat(minPrice) &&
-            parseFloat(modelAnnee.price.replace(/[,\s]/g, '')) <= parseFloat(maxPrice)
+function filtering(
+  cars,
+  searchText,
+  selectedMarque,
+  selectedModel,
+  minPrice,
+  maxPrice,
+  selectedCarburant,
+  selectedTransmission,
+  selectedPlace,
+  selectedPuissance,
+  selectedCylindre
+) {
+  return cars.filter((car) => {
+    // Debug: Check car marque
+    const matchMarque = selectedMarque ? car.marque.nom === selectedMarque : true;
+    console.log(`Car: ${car.marque.nom}, Match Marque: ${matchMarque}`);
+
+    // If marque doesn't match, skip the car
+    if (!matchMarque) return false;
+
+    // Filter models
+    const filteredModels = car.models.filter((model) => {
+      const matchModel = selectedModel ? model.model === selectedModel : true;
+      console.log(`  Model: ${model.model}, Match Model: ${matchModel}`);
+
+      // If model doesn't match, skip this model
+      if (!matchModel) return false;
+
+      // Filter details per year
+      const filteredDetails = Object.entries(model.detailsParAnnee).filter(([annee, modelAnnee]) => {
+        const price = parseFloat(modelAnnee.price.replace(/[,\s]/g, ''));
+        const matchPrice =
+          minPrice && maxPrice
+            ? price >= parseFloat(minPrice) && price <= parseFloat(maxPrice)
             : true;
 
-            const matchKeyword = searchText ? modelAnnee.keyWords.some((keyword) => keyword.toLowerCase().includes(searchText.toLowerCase())) : true;
-            
-            const matchCarburant = selectedCarburant ? modelAnnee.carburant === selectedCarburant : true;
-            
-            const matchTransmission = selectedTransmission ? modelAnnee.transmission === selectedTransmission : true;
+        const matchKeyword = searchText
+          ? modelAnnee.keyWords.some((keyword) =>
+              keyword.toLowerCase().includes(searchText.toLowerCase())
+            )
+          : true;
 
-            const matchPlace =selectedPlace === ">4" ? modelAnnee.places > 4: selectedPlace ? modelAnnee.places === selectedPlace: true;
-            
-            const matchPuissance = selectedPuissance 
-            ? parseInt(modelAnnee.puissance) >= parseInt(selectedPuissance.split("-")[0]) 
-            && parseInt(modelAnnee.puissance) <= parseInt(selectedPuissance.split("-")[1]) 
+        const matchCarburant = selectedCarburant
+          ? modelAnnee.carburant === selectedCarburant
+          : true;
+
+        const matchTransmission = selectedTransmission
+          ? modelAnnee.transmission === selectedTransmission
+          : true;
+
+        const matchPlace =
+          selectedPlace === '>4'
+            ? modelAnnee.places > 4
+            : selectedPlace
+            ? modelAnnee.places === parseInt(selectedPlace)
             : true;
 
-            const matchCylindre = selectedCylindre
-            ? parseInt(modelAnnee.cylindree) >= parseInt(selectedCylindre.split("-")[0])
-            && parseInt(modelAnnee.cylindree) <= parseInt(selectedCylindre.split("-")[1])
-            : true;
+        const matchPuissance = selectedPuissance
+          ? parseInt(modelAnnee.puissance) >= parseInt(selectedPuissance.split('-')[0]) &&
+            parseInt(modelAnnee.puissance) <= parseInt(selectedPuissance.split('-')[1])
+          : true;
 
-            return matchCarburant && matchTransmission && matchPrice && matchKeyword && matchPlace && matchPuissance && matchCylindre;
-        });
+        const matchCylindre = selectedCylindre
+          ? parseInt(modelAnnee.cylindree) >= parseInt(selectedCylindre.split('-')[0]) &&
+            parseInt(modelAnnee.cylindree) <= parseInt(selectedCylindre.split('-')[1])
+          : true;
+
+        const result =
+          matchPrice &&
+          matchKeyword &&
+          matchCarburant &&
+          matchTransmission &&
+          matchPlace &&
+          matchPuissance &&
+          matchCylindre;
+
+        console.log(`    Year: ${annee}, Match: ${result}`);
+        return result;
+      });
+
+      console.log(`  Filtered Details for Model "${model.model}":`, filteredDetails);
+      return filteredDetails.length > 0; // Keep model only if it has matching details
     });
-});
+
+    console.log(`Filtered Models for Car "${car.marque.nom}":`, filteredModels);
+    return filteredModels.length > 0; // Keep car only if it has matching models
+  });
 }
 
+  
     
       
     

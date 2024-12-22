@@ -28,7 +28,7 @@ export default function Product({ id, marque, annee, details, model }) {
         </div>
       </div>
       <div className="body">
-        <h3>{marque.nom}</h3>
+        <h3>{marque.nom} {model.model} {annee}</h3>
         <h2>{details.price } DH</h2>
         <Link to={`/voirTous-impression/${id}/${model.model}/${annee}`}> <button onClick={handleClickDetails}>Plus de details</button></Link>
       </div>

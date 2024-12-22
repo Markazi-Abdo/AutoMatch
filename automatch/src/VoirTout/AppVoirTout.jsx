@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import {connect} from 'react-redux';
 import Products from "./BodyShop/Products/Products/Products";
 import {useState} from 'react'
+import { div } from "framer-motion/client";
 //Abdellatif Markazi
 //Ouiam Adham: fix 1er filtrage cars filtered cars
 
@@ -19,24 +20,30 @@ function AppVoirTout({cars, filteredCars, inputCherche, marqueSelectCherche, mod
     setModelN(selectedModel)
   }
   return(
-  <div>
-    <Header />
-    <div className="voirTout">
+    <div>
+      <div className="header">
+        <Header/>
+      </div>
+      <div className="voirTout">
       <aside>
-          <SideBar/>
+        <SideBar />
       </aside>
       <main>
         <div className="bodyShop">
-        <BodyShop cars={cars} marqueSelectCherche={marqueSelectCherche} modelSelectCherche={modelSelectCherche} inputCherche={inputCherche} modelNotif={modelNotif} />
+          <BodyShop 
+            cars={cars} 
+            marqueSelectCherche={marqueSelectCherche} 
+            modelSelectCherche={modelSelectCherche} 
+            inputCherche={inputCherche} 
+            modelNotif={modelNotif} 
+          />
         </div>
-      <div className="products">
-     
-        <Products cars={filteredCars} modelN={modelN}/>
-        </div>      
+        <div className="products">
+          <Products cars={filteredCars} modelN={modelN} />
+        </div>
       </main>
-
     </div>
-  </div>
+    </div>
     
   )
 }

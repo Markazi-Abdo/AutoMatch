@@ -1,3 +1,5 @@
+
+@import url('https://fonts.cdnfonts.com/css/bitsumishi');
 :root{
     --darkColor: #121111;
     --lightColor: #ffffff;
@@ -14,17 +16,11 @@ body{
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: var(--lightColor);
+    overflow: hidden;
 }
 
 
 /* Contenu Styles */
-
-@font-face{
-    font-family: 'Bitsumishi';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Bitsumishi'), url('https://fonts.cdnfonts.com/s/21017/BITSUMIS.woff') format('woff');
-}
 
 .contenu h1{
    font-size: 150px;

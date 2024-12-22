@@ -302,7 +302,7 @@ function App(props) {
            <div class='time'>
             <p>${time}</p>
           </div>
-          <span>-------------------------------------------</span>
+          <span>---------------------------------------</span>
             <table>
         <tr>
             <th>Marque:</th>
@@ -310,7 +310,7 @@ function App(props) {
         </tr>
         <tr>
             <th>Model:</th>
-            <td>${props.selectedAnne}</td>
+            <td>${props.model.model}</td>
         </tr>
         <tr>
             <th>Annee:</th>
@@ -370,7 +370,7 @@ function App(props) {
         </tr>
         <tr>
 
-            <td colspan="2">-------------------------------------------</td>
+            <td colspan="2">--------------------------------------</td>
         </tr>
         <tr class='pricePrint2'>
             <th>Prix:</th>

@@ -40,10 +40,10 @@ export default function Performance() {
                     */}
                     <h5>Cylindrée</h5>
                     <div className="cylindree">
-                        <button onClick={() => handleCylindreFilter("100-200")}>100-200</button>
-                        <button onClick={() => handleCylindreFilter("200-300")}>200-300</button>
-                        <button onClick={() => handleCylindreFilter("300-400")}>300-400</button>
-                        <button onClick={() => handleCylindreFilter("400-500")}>400-500</button>
+                        <button onClick={() => handleCylindreFilter("1000-1500")}>100-200</button>
+                        <button onClick={() => handleCylindreFilter("1500-2000")}>200-300</button>
+                        <button onClick={() => handleCylindreFilter("2000-2500")}>300-400</button>
+                        <button onClick={() => handleCylindreFilter("2500-3000")}>400-500</button>
                     </div>
                 </div>
             )}
