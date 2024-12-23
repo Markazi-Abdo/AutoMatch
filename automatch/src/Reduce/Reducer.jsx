@@ -1724,9 +1724,9 @@ export default function Reduce(data = stateInitial, action){
                 selectMaxPrice: 60000, 
                 selectedCarburant: null, 
                 selectedTransmission: null, 
-                selectedPuissance: 0,
-                selectedCylindre: 0,
-                selectedPlaces: 0,
+                selectedPuissance: null,
+                selectedCylindre: null,
+                selectedPlaces: null,
                 filteredCars: data.cars, 
             };
 
@@ -1754,22 +1754,20 @@ function filtering(
   selectedCylindre
 ) {
   return cars.filter((car) => {
-    // Debug: Check car marque
+  
     const matchMarque = selectedMarque ? car.marque.nom === selectedMarque : true;
     console.log(`Car: ${car.marque.nom}, Match Marque: ${matchMarque}`);
 
-    // If marque doesn't match, skip the car
+    
     if (!matchMarque) return false;
-
-    // Filter models
     const filteredModels = car.models.filter((model) => {
       const matchModel = selectedModel ? model.model === selectedModel : true;
       console.log(`  Model: ${model.model}, Match Model: ${matchModel}`);
 
-      // If model doesn't match, skip this model
+      
       if (!matchModel) return false;
 
-      // Filter details per year
+
       const filteredDetails = Object.entries(model.detailsParAnnee).filter(([annee, modelAnnee]) => {
         const price = parseFloat(modelAnnee.price.replace(/[,\s]/g, ''));
         const matchPrice =
@@ -1822,11 +1820,11 @@ function filtering(
       });
 
       console.log(`  Filtered Details for Model "${model.model}":`, filteredDetails);
-      return filteredDetails.length > 0; // Keep model only if it has matching details
+      return filteredDetails.length > 0; 
     });
 
     console.log(`Filtered Models for Car "${car.marque.nom}":`, filteredModels);
-    return filteredModels.length > 0; // Keep car only if it has matching models
+    return filteredModels.length > 0; 
   });
 }
 
