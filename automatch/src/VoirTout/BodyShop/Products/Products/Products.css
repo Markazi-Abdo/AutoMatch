@@ -14,8 +14,8 @@
 
 .cars-container .total-cars{
     position: absolute;
-    top: -50px;
-    left: 980px;
+    top: -45px;
+    left: 500px;
 }
 .cars-container .total-cars h2{
     font-size: 25px;

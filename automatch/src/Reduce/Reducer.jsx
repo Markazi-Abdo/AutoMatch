@@ -1769,10 +1769,10 @@ function filtering(
 
 
       const filteredDetails = Object.entries(model.detailsParAnnee).filter(([annee, modelAnnee]) => {
-        const price = parseFloat(modelAnnee.price.replace(/[,\s]/g, ''));
+        const price = modelAnnee.price.replace(/[,\s]/g, '')
         const matchPrice =
           minPrice && maxPrice
-            ? price >= parseFloat(minPrice) && price <= parseFloat(maxPrice)
+            ? price >= minPrice && price <= maxPrice
             : true;
 
         const matchKeyword = searchText

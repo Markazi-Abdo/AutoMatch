@@ -10,7 +10,6 @@ const Price = () => {
   const min = 10000;
   const max = 60000;
 
-  // Get the reset values from Redux state
   const { selectMinPrice, selectMaxPrice } = useSelector((state) => ({
     selectMinPrice: state.selectMinPrice,
     selectMaxPrice: state.selectMaxPrice,
@@ -27,15 +26,13 @@ const Price = () => {
   };
 
   useEffect(() => {
-    // Dispatch updated price values whenever leftValue or rightValue changes
     dispatch({
       type: "MIN_MAX_PRICE",
-      payload: { minPrice: parseFloat(leftValue), maxPrice: parseFloat(rightValue) },
+      payload: { minPrice: leftValue, maxPrice: rightValue },
     });
   }, [leftValue, rightValue, dispatch]);
 
   useEffect(() => {
-    // Sync the slider values with the Redux reset state
     setLeftValue(selectMinPrice);
     setRightValue(selectMaxPrice);
   }, [selectMinPrice, selectMaxPrice]);
@@ -61,7 +58,7 @@ const Price = () => {
           max={max}
           step={5000}
           value={leftValue}
-          onChange={(e) => updateLeftValue(parseFloat(e.target.value))}
+          onChange={(e) => updateLeftValue(e.target.value)}
         />
         <input
           type="range"
@@ -69,7 +66,7 @@ const Price = () => {
           max={max}
           step={5000}
           value={rightValue}
-          onChange={(e) => updateRightValue(parseFloat(e.target.value))}
+          onChange={(e) => updateRightValue(e.target.value)}
         />
       </div>
       <div className="labels">
