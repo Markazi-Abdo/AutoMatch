@@ -1,13 +1,11 @@
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import './Transmission.css';
 
 export default function Transmission() {
   const dispatch = useDispatch();
-  const [selectedTransmission, setSelectedTransmission] = useState(null);
+  const selectedTransmission = useSelector((state) => state.selectedTransmission);
 
   const handleTransmissionSelect = (transmissionType) => {
-    setSelectedTransmission(transmissionType);
     dispatch({
       type: 'TRANSMISSION',
       payload: { transmission: transmissionType },

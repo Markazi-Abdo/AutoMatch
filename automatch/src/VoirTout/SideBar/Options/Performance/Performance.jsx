@@ -2,25 +2,25 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
 import './Performance.css';
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 export default function Performance() {
     const [isOpen, setIsOpen] = useState(true);
-    const [selectedPuissance, setSelectedPuissance] = useState(null); 
-    const [selectedCylindree, setSelectedCylindree] = useState(null); 
+    const selectedPuissance = useSelector((state) => state.selectedPuissance);
+    const selectedCylindree = useSelector((state) => state.selectedCylindre); 
     const dispatch = useDispatch();
+
+    console.log(selectedCylindree);
 
     const setDisplay = () => {
         setIsOpen(!isOpen);
     };
 
-    const handlePuissanceFilter = (range) => {
-        setSelectedPuissance(range); 
+    const handlePuissanceFilter = (range) => { 
         dispatch({ type: 'PUISSANCE', payload: { puissance: range } });
     };
 
-    const handleCylindreFilter = (range) => {
-        setSelectedCylindree(range); 
+    const handleCylindreFilter = (range) => { 
         dispatch({ type: 'CYLINDRE', payload: { cylindre: range } });
     };
 

@@ -1535,9 +1535,9 @@ selectMinPrice: 10000,
 selectMaxPrice: 60000,
 selectedCarburant: null, 
 selectedTransmission: null, 
-selectedPuissance: 0,
-selectedCylindre: 0,
-selectedPlaces: 0,
+selectedPuissance: null,
+selectedCylindre: null,
+selectedPlaces: null,
 filteredCars:[],
 selectedOption: null, 
 };
@@ -1660,7 +1660,7 @@ export default function Reduce(data = stateInitial, action){
         case 'PLACE':
             return {
                 ...data,
-                selectedPlace: action.payload.place,
+                selectedPlaces: action.payload.place,
                 filteredCars: filtering(
                     data.cars, 
                     data.searchText, 

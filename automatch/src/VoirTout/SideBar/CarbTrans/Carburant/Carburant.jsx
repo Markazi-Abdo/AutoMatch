@@ -1,13 +1,11 @@
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import './Carburant.css';
 
 export default function Carburant() {
   const dispatch = useDispatch();
-  const [selectedCarburant, setSelectedCarburant] = useState(null);
+  const selectedCarburant = useSelector((state) => state.selectedCarburant);
 
   const handleCarburantSelect = (carburantType) => {
-    setSelectedCarburant(carburantType);
     dispatch({
       type: 'CARBURANT',
       payload: { carburant: carburantType },
