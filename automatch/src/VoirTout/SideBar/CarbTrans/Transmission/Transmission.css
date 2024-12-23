@@ -35,6 +35,17 @@
 
 }
 
+.trans-options button.active{
+    background: #2e77ae;
+    color: white;
+    transition: 0.5s;
+}
+.trans-options button.active{
+    background: #2e77ae;
+    color: white;
+    transition: 0.5s;
+}
+
 .trans-options button:hover{
     background: #2e77ae;
     color: white;

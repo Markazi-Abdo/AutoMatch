@@ -45,8 +45,32 @@
     border: 2px solid #2e77ae;
     border-radius: 50px;
     padding: 7px;
-    font-size: 12px;
+    font-size: 9.25px;
+    width: 90px;
     color: #2e77ae;
     transition: 0.5s;
     background: #b6b7b7;
+}
+
+.accordion-performance .body .puissance button:hover{
+    background: #2e77ae;
+    color: white;
+    transition: 0.5s;
+}
+
+.accordion-performance .body .cylindree button:hover{
+    background: #2e77ae;
+    color: white;
+    transition: 0.5s;
+}
+.accordion-performance .body .puissance button.active{
+    background: #2e77ae;
+    color: white;
+    transition: 0.5s;
+}
+
+.accordion-performance .body .cylindree button.active{
+    background: #2e77ae;
+    color: white;
+    transition: 0.5s;
 }

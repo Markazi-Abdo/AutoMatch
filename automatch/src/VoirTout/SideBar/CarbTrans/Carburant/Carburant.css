@@ -41,6 +41,18 @@
     background: #b6b7b7;
 }
 
+.car-options button.active{
+    background: #2e77ae;
+    color: white;
+    transition: 0.5s;
+}
+
+.car-options button.active{
+    background: #2e77ae;
+    color: white;
+    transition: 0.5s;
+}
+
 .car-options button:hover{
     background: #2e77ae;
     color: white;

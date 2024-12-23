@@ -41,8 +41,10 @@
     transition: 0.5s;
 }
 
-.accordion-dimension-espace .body .place:focus{
+.accordion-dimension-espace .body .place.active{
     background: #2e77ae;
     color: white;
     transition: 0.5s;
 }
+
+
