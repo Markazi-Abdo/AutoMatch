@@ -1,0 +1,17 @@
+.btnFull{
+    border: none;
+    background: none;
+    color: black;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 10px;
+}
+.btnFull:hover{
+    border: none;
+    background: black;
+    color: white;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}

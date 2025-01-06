@@ -1,0 +1,66 @@
+.car-options{
+    display: flex;
+    gap: 15px;
+    margin: 10px 0 10px;
+}
+
+.car-options .Essence{
+    border: 2px solid #2e77ae;
+    border-radius: 50px;
+    padding: 7px;
+    font-size: 0.75rem;
+    color: #2e77ae;
+    transition: 0.5s;
+    background: #b6b7b7;
+}
+.car-options .Diesel{
+    border: 2px solid #2e77ae;
+    border-radius: 50px;
+    padding: 7px;
+    font-size: 0.75rem;
+    color: #2e77ae;
+    transition: 0.5s;
+    background: #b6b7b7;
+}
+.car-options .Hybride{
+    border: 2px solid #2e77ae;
+    border-radius: 50px;
+    padding: 7px;
+    font-size: 0.75rem;
+    color: #2e77ae;
+    transition: 0.5s;
+    background: #b6b7b7;
+}
+.car-options .Electrique{
+    border: 2px solid #2e77ae;
+    border-radius: 50px;
+    padding: 7px;
+    font-size: 0.75rem;
+    color: #2e77ae;
+    transition: 0.5s;
+    background: #b6b7b7;
+}
+
+.car-options button.active{
+    background: #2e77ae;
+    color: white;
+    transition: 0.5s;
+}
+
+.car-options button.active{
+    background: #2e77ae;
+    color: white;
+    transition: 0.5s;
+}
+
+.car-options button:hover{
+    background: #2e77ae;
+    color: white;
+    transition: 0.5s;
+}
+
+.car-options button:focus{
+    background: #2e77ae;
+    color: white;
+    transition: 0.5s;
+}

@@ -1,0 +1,65 @@
+:root{
+    --darkColor--: #121111;
+    --lightColor--: #ffffff;
+    --blueColor--: #2e77ae;
+    --orangeColor--: #ff8e2b;
+    --grayColor--: #b6b7b7 ;
+    --black--: #000000 ;
+}
+.App{
+    box-sizing: border-box;
+    background: hsl(0, 0%, 97%);
+    padding: 30px;
+    height: 100%;
+   
+
+}
+.navbar.f{
+    margin: 40px 120px;
+}
+.priceDetails{
+    font-weight: bold;
+    color: var(--orangeColor--);
+}
+p{
+    padding: 0;
+    margin-left: 10px;
+    line-height: 0.8;
+    
+}
+hr{
+    border:1px solid black;
+    margin-top: -8px;
+}
+.details{
+    box-sizing: border-box;
+}
+@media print {
+    /* Targeting the print layout */
+    @page {
+      size: 58mm auto; /* 58mm wide, auto height */
+      margin: 0; /* Ensure no margins */
+    }
+  
+    body {
+      font-size: 10px; /* Smaller font for compact paper */
+      width: 58mm; /* Match the width of the thermal paper */
+      padding: 0;
+      margin: 0;
+    }
+  
+    .details {
+      margin: 0;
+      padding: 5mm; /* Add padding if needed */
+    }
+  
+    .details p {
+      margin: 3px 0;
+      line-height: 1.2em;
+    }
+  }
+  @media screen and (min-height: 800px) {
+    .App{
+      height: 900px;
+  }
+}
