@@ -2,6 +2,7 @@ import { Route , Routes } from "react-router-dom"
 import HomePage from "./Home Page/HomePage"
 import App from "./Riyad/App"
 import CarDetails from "./Print Page/all"
+import AddCarForm from "./admin side/addCar"
 //import AppAutoMatch from "./AppAutoMatch"
 import AppVoirTout from "./VoirTout/AppVoirTout"
 import ModelApp from "./Model Page/ModelApp"
@@ -13,6 +14,9 @@ export default function RoutingManagement({cars, inputCherche, marqueSelectCherc
         {/* ------ Home Page ------ */}
         <Route path = '/acceuil' element = {<HomePage/>} />
 
+
+        {/* ------ Admin ------ */}
+        <Route path = '/admin' element = {<AddCarForm/>} />
 
         {/* ------ Rechercher ------ */}
 
