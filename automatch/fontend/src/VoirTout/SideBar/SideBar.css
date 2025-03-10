@@ -1,0 +1,24 @@
+.sidebar-container{
+    background: #b6b7b74e;
+    padding: 19px;
+    margin-top: 25px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    min-height: 700px;
+    overflow: hidden;
+    width: 350px;
+    
+    
+}
+
+.sidebar-container .titles{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.sidebar-container .titles .reset{
+    color: #2e77ae;
+    cursor: pointer;
+    transition: 0.5s;
+}

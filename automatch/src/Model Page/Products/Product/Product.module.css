@@ -1,0 +1,113 @@
+.card {
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    margin: 15px;
+    width: 250px;
+    position: relative;
+    box-shadow: 0 0 17px rgba(0, 0, 0, 0.742);
+}
+.selected{
+  border: 2px solid #ff8e2b;
+}
+/* Default style for all color buttons */
+.color button {
+    border: 1px solid black;
+    width: 18px; /* Size of the color button */
+    height: 18px;
+    border-radius: 50%; /* Make the button circular */
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .color{
+    display: flex;
+    justify-content: center;
+
+    gap: 5px;
+  }
+  
+  /* Hover effect for color buttons */
+  .color button:hover {
+    transform: scale(1.2); /* Enlarge slightly on hover */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+  }
+  
+  /* Active or selected color button */
+  .color button.active {
+    border: 2px solid #000; /* Black border for the selected color */
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.4); /* Slightly stronger shadow for active */
+  }
+  
+  /* Add unique classes for specific colors (optional) */
+  .blue {
+    background-color: #0000ff; /* Example: blue */
+  }
+  
+  .green {
+    background-color: #00ff00; /* Example: green */
+  }
+  
+  .red {
+    background-color: #ff0000; /* Example: red */
+  }
+  
+  .black {
+    background-color: #000000; /* Example: black */
+  }
+  
+  .brown {
+    background-color: #a52a2a; /* Example: brown */
+  }
+.card .header img {
+    height: 100px;
+    display: inline-block;
+    text-align: center;
+}
+.imgLogo{
+  aspect-ratio: 6 / 6;
+}
+/* 
+.card .header .color .green {
+    background: green;
+    margin: 0;
+}
+
+.card .header .color .blue {
+    background: blue;
+    margin: 0;
+}
+
+.card .header .color .brown {
+    background: brown;
+    margin: 0;
+}
+
+.card .header .color .black {
+    background: black;
+    margin: 0;
+} */
+
+/* .card .header .color {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    z-index: 2;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+
+} */
+
+
+
+.card .header .logo {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    z-index: 3;
+}
+
+.card .header .logo img {
+    height: 35px;
+}
+

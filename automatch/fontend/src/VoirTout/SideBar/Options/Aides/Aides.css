@@ -1,0 +1,35 @@
+.accordion-aides{
+    margin-top: 25px;
+    margin-bottom: 2px;
+}
+
+.accordion-aides .title{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid;
+    padding-bottom: 10px;
+}
+
+.accordion-aides .title i{
+    cursor: pointer;
+    border: 2px solid;
+    border-radius: 50px;
+    padding: 1.5px;
+}
+
+.accordion-aides .body{
+    margin: 10px;
+}
+
+.accordion-aides .body input{
+    border: 1px solid;
+    outline: none;
+    border-radius: 3px;
+    padding: 5px;
+    width: 55px;
+    margin: 3px;
+}
+
+.accordion-aides .body span{
+    margin: 8px ;
+}

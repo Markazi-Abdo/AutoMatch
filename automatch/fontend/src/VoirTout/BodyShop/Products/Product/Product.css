@@ -1,0 +1,74 @@
+.card{
+    border: 3px solid rgba(57, 57, 249, 0.707);
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    margin: 15px;
+    width: 245px;
+    min-height: 250px;
+    position: relative;
+    box-shadow: 0 0 13px black;
+}
+
+.card .header img{
+    height: 85px;
+    object-fit: fill;
+    text-align: center;
+}
+
+.card .body h3{
+    font-weight: 500;
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+
+.card .header .color{
+    position: absolute;
+    top: 6px;
+    left: 15px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.card .header .color .colorButtons{
+    border-radius: 50px;
+    padding: 6px;
+    height: 3px;
+    cursor: default;
+}
+
+.card .header .logo{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    z-index: 3;
+}
+
+.card .header .logo img{
+    height: 23px;
+    object-fit: fill;
+}
+
+.card .body button{
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px white;
+    font-size: 0.8rem;
+    border-radius: 10px;
+    text-align: center;
+    width: 140px;
+    background: linear-gradient(to bottom, rgba(76,154,246,1) 0%, rgba(22,87,223,1) 98%);
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.card .body button:hover{
+    box-shadow: 0 0 13px rgba(57, 57, 249, 0.707);
+    transition: 0.5s;
+}

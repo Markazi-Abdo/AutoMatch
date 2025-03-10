@@ -1,0 +1,86 @@
+  .price-container {
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+    margin-left: 20px;
+    margin-top: 20px;
+    
+  }
+  
+  .diagram {
+    position: relative;
+    width: 100%;
+    height: 115px;
+    background-color: white;
+    border-radius: 5px;
+    border-top-left-radius: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  .shaded {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-top-left-radius: 100%;
+    border-bottom: 5px solid #2e77ae;
+    background: gray
+  }
+  
+  .slider-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    height: 0;
+    color: #2e77ae;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 15px;
+    background-color: white;
+    border: 3.5px solid #2e77ae;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -30px;
+    pointer-events: auto;
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background-color: #2e77ae;
+    border: 2px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    pointer-events: auto;
+  }
+  
+  .labels {
+    position: relative;
+    height: 20px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+  
+  .label {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    color: #333;
+  }
+  

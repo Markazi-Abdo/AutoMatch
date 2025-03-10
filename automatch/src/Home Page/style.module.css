@@ -1,0 +1,180 @@
+
+@import url('https://fonts.cdnfonts.com/css/bitsumishi');
+:root{
+    --darkColor: #121111;
+    --lightColor: #ffffff;
+    --blueColor: #2e77ae;
+    --orangeColor: #ff8e2b;
+    --grayColor: #b6b7b7;
+    --black: #000000;
+}
+
+
+
+/* Body */
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--lightColor);
+    overflow: hidden;
+}
+
+
+/* Contenu Styles */
+
+.contenu h1{
+   font-size: 150px;
+   line-height: 100px;
+    font-family: 'Bitsumishi';
+    color: var(--blueColor);
+}
+
+h6{
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+.home{
+    display: flex;
+    justify-content: space-between;
+}
+.home img{
+    position: absolute;
+    bottom: 130px;
+}
+@media screen and (min-width: 1024px) {
+    .home img{
+        position: absolute;
+        bottom: 130px;
+        width: 450px;
+    }
+    .contenu h1{
+        font-size: 140px;
+        line-height: 110px;
+         font-family: 'Bitsumishi';
+         color: var(--blueColor);
+     }
+}
+@media screen and (min-width: 1340px) {
+    .home img{
+        position: absolute;
+        bottom: 130px;
+        width: 550px;
+    }
+    .contenu h1{
+        font-size: 170px;
+        line-height: 120px;
+         font-family: 'Bitsumishi';
+         color: var(--blueColor);
+     }
+}
+
+.contenu{
+    text-align: left;
+    margin-top: 5px;
+}
+
+
+@media screen and (min-height: 800px) {
+    .home img{
+        position: absolute;
+        bottom: 130px;
+        width: 650px;
+    }
+    .contenu h1{
+        font-size: 220px;
+        line-height: 150px;
+         font-family: 'Bitsumishi';
+         color: var(--blueColor);
+         margin-top: 70px;
+     }
+}
+
+.contenu{
+    text-align: left;
+    margin-top: 5px;
+}
+/* Footer Styles */
+
+.footer{
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: var(--lightColor);
+    border-radius: 50px 50px 0 0;
+    background-color: var(--darkColor);
+    padding: 30px 20px;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+.centerFooter{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.contentText{
+
+    display: flex;
+    gap: 40px;   
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contentText div{
+    display: flex;
+    gap: 40px;
+}
+
+.footerStep{
+    
+    flex-direction: row;
+    text-align: center;
+    color: var(--lightColor);
+}
+
+.footer-step img{
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    
+}
+
+.footerButton{
+    margin-left: 20px;
+}
+
+.button{
+    background-color: var(--orangeColor);
+    color: var(--lightColor);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 60px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0;
+}
+
+.button:hover{
+    background-color: var(--orangeColor);
+    box-shadow: 0px 4px 12px var(--orangeColor);
+    transform: scale(1.05);
+}
+
+.btnShadow{
+    box-shadow: 0px 0px 12px var(--orangeColor);
+    padding: 30px 60px;
+    font-weight: bold;
+    font-size: 20px;
+}
