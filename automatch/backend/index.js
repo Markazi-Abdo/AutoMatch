@@ -2,6 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import autoRouter from './routes/car.routes.js';
 
 dotenv.config();  
 
@@ -27,5 +28,7 @@ const CarSchema = new mongoose.Schema({
 
 const Car = mongoose.model("Car", CarSchema);
 export default Car;
+
+app.use("/auto", autoRouter)
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
