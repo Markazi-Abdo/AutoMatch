@@ -26,14 +26,6 @@ const CarSchema = new mongoose.Schema({
 });
 
 const Car = mongoose.model("Car", CarSchema);
-
-app.get('/api/cars', async (req, res) => {
-  try {
-    const cars = await Car.find();
-    res.json(cars);
-  } catch (err) {
-    res.status(500).send("Error fetching cars");
-  }
-});
+export default Car;
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
